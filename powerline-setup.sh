@@ -3,6 +3,7 @@ set -e
 
 # This script will clone 'powerline-shell' to the 'projects' directory and
 # install.
+# python3, python-pip and python-setuptools are dependancies for this script to work.
 
 # Check if 'projects' directory exists and create if not.
 [ ! -d "/home/kim/projects" ] && mkdir /home/kim/projects
