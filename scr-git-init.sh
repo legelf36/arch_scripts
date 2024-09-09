@@ -24,7 +24,7 @@ git add -A
 git commit -m "first commit"
 
 # Path for repository
-git remote add origin https://github.com/legelf36/desk-LMDE4-scripts.git
+git remote add origin https://github.com/legelf36/arco_scripts.git
 
 # Push changes to github
 git push -u --set-upstream origin master
