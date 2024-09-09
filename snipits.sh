@@ -26,3 +26,19 @@ xrdb ~/.Xresources
 
 # Find commands related to subject.
 # apropos <subject>
+
+# grep
+grep '# ' ~/.bashrc
+
+# grep inverse
+grep -v '# ' ~/.bashrc
+
+# grep for files that contain <string> in ~/.config/conky
+grep -Irl '# ' ~/.config/conky/
+
+# sed substition to output
+# <command> | sed 's/OLD/NEW/g'
+
+# sed substition in place
+sed -i 's/###EXPORT###/###EXPORT ENV VAR###/g' ~/.bashrc
+
