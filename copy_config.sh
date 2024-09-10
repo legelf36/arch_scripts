@@ -11,6 +11,9 @@ cp -rf ~/.config/polybar/ ~/.scripts/.config/
 cp -rf ~/.config/rofi/ ~/.scripts/.config/
 cp -rf ~/.config/terminator/ ~/.scripts/.config/
 cp -rf ~/.config/thefuck/ ~/.scripts/.config/
+cp -rf ~/.config/i3/config/ ~/.scripts/.config/
+cp -rf ~/.config/i3blocks/ ~/.scripts/.config/
+cp -rf ~/.config/i3status/ ~/.scripts/.config/
 
 git add -A
 git commit -m "update"

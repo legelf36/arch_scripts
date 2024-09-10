@@ -1,0 +1,23 @@
+[global_config]
+  inactive_color_offset = 0.5061728395061729
+  inactive_bg_color_offset = 0.5061728395061729
+[keybindings]
+[profiles]
+  [[default]]
+    font = MesloLGMDZ Nerd Font Mono 9
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    scrollbar_position = hidden
+    use_system_font = False
+    title_use_system_font = False
+    title_font = MesloLGS Nerd Font Mono 9
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+      size = 1450, 920
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
