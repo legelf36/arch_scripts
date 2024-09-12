@@ -186,7 +186,7 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
 
 #iso and version used to install ArcoLinux
-alias iso="cat /etc/dev-rel | awk -F '=' '/ISO/ {print $2}'"
+alias iso="cat /etc/dev-rel | awk -F '=' '/ISO/ {print %2}'"
 alias isoo="cat /etc/dev-rel"
 
 #Cleanup orphaned packages
@@ -261,8 +261,7 @@ alias sysfailed="systemctl list-units --failed"
 alias ssn="sudo shutdown now"
 alias sr="sudo reboot"
 
-# function to simplify ssh login after key has
-# been sent
+# function to simplify ssh login after key has been sent
 sshin () {
     ssh 192.168.0."$1"
     return

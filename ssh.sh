@@ -15,7 +15,7 @@ which ssh
 ip addr show
 
 # Login to remote
-ssh <user>@<ip_address>
+# ssh <user>@<ip_address>
 
 # Check for existing key in default directory
 ls -l ~/.ssh
@@ -24,5 +24,5 @@ ls -l ~/.ssh
 ssh-keygen -b 4096
 
 # Copy key to remote server
-ssh-copy-id <remote_user>@<remote_ip>
+# ssh-copy-id <remote_user>@<remote_ip>
 

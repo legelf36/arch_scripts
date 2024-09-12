@@ -234,9 +234,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Gaps
-gaps outer 18px
-gaps inner 15px
-gaps top 22px
+gaps outer 10px
+gaps inner 5px
+gaps top 26px
 
 #Hide window title bar
 default_border pixel 1
