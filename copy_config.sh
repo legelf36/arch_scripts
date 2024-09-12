@@ -11,7 +11,7 @@ cp -rfv ~/.config/polybar/ ~/.scripts/.config/
 cp -rfv ~/.config/rofi/ ~/.scripts/.config/
 cp -rfv ~/.config/terminator/ ~/.scripts/.config/
 cp -rfv ~/.config/thefuck/ ~/.scripts/.config/
-cp -fv ~/.config/i3/config ~/.scripts/.config/
+cp -fv ~/.config/i3/config ~/.scripts/.config/i3/
 cp -rfv ~/.config/i3blocks/ ~/.scripts/.config/
 cp -rfv ~/.config/i3status/ ~/.scripts/.config/
 
