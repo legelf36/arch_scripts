@@ -13,7 +13,7 @@ imlib_cache_size=10,
 gap_x = -1850, gap_y = 500,
 minimum_width = 390, minimum_height = 200, maximum_width = 400,
 alignment = 'top_left',
-own_window = true, --own_window_class = conky,
+own_window = true, --own_window_class = 'Conky'
 own_window_type = 'normal',-- if own_window true options are: normal/override/dock/desktop/panel
 own_window_argb_visual = true, own_window_transparent = true,
 own_window_hints = 'undecorated,sticky,skip_taskbar,skip_pager,below',
