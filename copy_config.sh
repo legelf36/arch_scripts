@@ -3,6 +3,7 @@
 cp -fv ~/.bashrc ~/.scripts/.config/
 cp -fv ~/.bash_aliases ~/.scripts/.config/
 cp -fv ~/.vimrc ~/.scripts/.config/
+cp -fv ~/.config/starship.toml ~/.scripts/.config/
 cp -rfv ~/.config/ranger/ ~/.scripts/.config/
 cp -fv ~/.config/conky/*Redux* ~/.scripts/.config/conky/
 cp -rfv ~/.config/fastfetch/ ~/.scripts/.config/
