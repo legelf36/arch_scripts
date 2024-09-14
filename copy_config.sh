@@ -15,7 +15,7 @@ cp -rfv ~/.config/thefuck/ ~/.scripts/.config/
 cp -fv ~/.config/i3/config ~/.scripts/.config/i3/config
 cp -rfv ~/.config/i3blocks/ ~/.scripts/.config/
 cp -rfv ~/.config/i3status/ ~/.scripts/.config/
-cp -rfv ~/.config/alacritty/ ~/.scrips/.config/
+cp -rfv ~/.config/alacritty/ ~/.scripts/.config/
 
 git add -A
 git commit -m "update config"
