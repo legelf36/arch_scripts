@@ -9,7 +9,7 @@ export PAGER='most'
 PS1='[\u \W]\$ '
 
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+# [[ $- != *i* ]] && return
 
 
 if [ -d "$HOME/.bin" ] ;
@@ -21,7 +21,7 @@ if [ -d "$HOME/.local/bin" ] ;
 fi
 
 #ignore upper and lowercase when TAB completion
-bind "set completion-ignore-case on"
+# bind "set completion-ignore-case on"
 
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
@@ -52,40 +52,22 @@ ex ()
 
 . /home/kim/.bash_aliases
 
-if [ -f 'which powerline-daemon' ]; then
-  powerline-daemon -q
-  export POWERLINE_BASH_CONTINUATION=1
-  export POWERLINE_BASH_SELECT=1
-  /usr/share/powerline/bindings/bash/powerline.sh
-fi
+# if [ -f 'which powerline-daemon' ]; then
+#   powerline-daemon -q
+#   export POWERLINE_BASH_CONTINUATION=1
+#   export POWERLINE_BASH_SELECT=1
+#   /usr/share/powerline/bindings/bash/powerline.sh
+# fi
 
-function _update_ps1() {
-  PS1=$(powerline-shell $?)
-}
+# function _update_ps1() {
+#   PS1=$(powerline-shell $?)
+# }
 
 # if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
 #   PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 # fi
 
-# porting tools - install when not installed
 fastfetch
-# neofetch
-# screenfetch
-# alsi
-# paleofetch
-# fetch
-# hfetch
-# sfetch
-# ufetch
-# ufetch-arco
-# pfetch
-# sysinfo
-# sysinfo-retro
-# cpufetch
-# colorscript random
-
-# Created by `pipx` on 2024-04-28 21:15:57
-export PATH="$PATH:/home/kim/.local/bin"
 
 eval "$(thefuck --alias)"
 eval "$(zoxide init bash)"

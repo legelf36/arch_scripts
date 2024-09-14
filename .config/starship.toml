@@ -11,7 +11,7 @@ $directory\
 [](fg:color_bg1 bg:color_green)\
 $git_branch\
 $git_status\
-[](fg:color_green bg:color_blue)\
+[](fg:color_green bg:color_purple)\
 $lua\
 $c\
 $rust\
@@ -22,7 +22,7 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[](fg:color_blue bg:color_bg3)\
+[](fg:color_purple bg:color_bg3)\
 $docker_context\
 $conda\
 [](fg:color_bg3 bg:color_blue)\
@@ -117,8 +117,8 @@ format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_green)]($style)'
 
 [lua]
 symbol = '🌙'
-style = "bg:color_blue"
-format = '[[ $symbol( $version)](fg:color_fg0 bg:color_blue)]($style)'
+style = "bg:color_purple"
+format = '[[ $symbol( $version )](fg:color_fg0 bg:color_purple)]($style)'
 
 [nodejs]
 symbol = ""
