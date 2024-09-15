@@ -138,11 +138,3 @@ alias sysfailed="systemctl list-units --failed"
 alias ssn="sudo shutdown now"
 alias sr="sudo reboot"
 
-# function to simplify ssh login after key has been sent
-sshin () {
-    ssh 192.168.0."$1"
-    return
-}
-
-
-export -f sshin
