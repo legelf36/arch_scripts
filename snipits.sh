@@ -42,3 +42,20 @@ grep -Irl '# ' ~/.config/conky/
 # sed substition in place
 sed -i 's/###EXPORT###/###EXPORT ENV VAR###/g' ~/.bashrc
 
+# use tail to monitor log file.
+tail -f /usr/log.log
+
+# ctrl+Z to push program to tthe background
+# fg to return to the foreground
+
+# ctrl+r to do history search
+
+# redo history command (history line number)
+# !103
+
+# execute multiple commands with no error checking
+ls -l;ls -al
+
+# execute multiple commands with error checking
+ls -l && ls -al
+

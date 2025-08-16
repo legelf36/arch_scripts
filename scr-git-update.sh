@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# This script is to update my 'desk-LMDE4-scripts' repository on github.
+# This script is to update my 'arco-scripts' repository on github.
 
 # Push to the stack and move to the 'scripts' directory.
-pushd /home/kim/.scripts
+# pushd /home/kim/.scripts
 
 # Add any changes to 'master' branch.
 git add -A
@@ -15,5 +15,5 @@ git commit -m "update to scripts"
 git push -u
 
 # Go to previous directory and remove '.scripts' from the stack
-popd
+# popd
 
