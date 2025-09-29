@@ -54,8 +54,11 @@ tail -f /usr/log.log
 # !103
 
 # execute multiple commands with no error checking
-ls -l;ls -al
+ls -l
+ls -al
 
 # execute multiple commands with error checking
 ls -l && ls -al
 
+# Get UUID for the /dev/sdb1 that you want to make new /home
+sudo blkid /dev/sdb1

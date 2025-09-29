@@ -11,6 +11,9 @@ makepkg -si
 # manual for yay
 man yay
 
+# Clean cache
+yay -Scc
+
 # Install a package using yay
 yay -S <package>
 
@@ -28,6 +31,9 @@ yay -Sua
  
 # Pakages requiring updates
 yay -Pu
+
+# Show ten largest packages
+yay -Ps
 
 # Cleanup old dependencies
 yay -Yc
