@@ -3,9 +3,6 @@
 # github personal access token April 2nd 2022
 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
 
-# Add any changes to 'master' branch.
-git add -A
-
 # Commit changes to the 'master' branch.
 git commit -m "update to scripts"
 
@@ -36,3 +33,12 @@ git config --global color.ui auto
 
 # set a username
 git config --global user.name “[firstname lastname]”
+
+# diff of what is changed but not staged
+git diff
+
+# diff of what is staged but not committed
+git diff --staged
+
+# list of branches
+git branch
