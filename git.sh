@@ -31,3 +31,8 @@ git commit -m "first commit"
 # git status
 git status
 
+# set automatic command line color
+git config --global color.ui auto
+
+# set a username
+git config --global user.name “[firstname lastname]”
