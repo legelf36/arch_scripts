@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ###EXPORT###
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='nvim'
+export VISUAL='nvim'
 export HISTCONTROL=ignoreboth:erasedups
 export PAGER='most'
 
@@ -11,16 +11,19 @@ PS1='[\u \W]\$ '
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-
-if [ -d "$HOME/.bin" ] ;
-  then PATH="$HOME/.bin:$PATH"
+if [ -x /usr/bin/dircolors ]; then
+  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 fi
 
-if [ -d "$HOME/.local/bin" ] ;
-  then PATH="$HOME/.local/bin:$PATH"
+if [ -d "$HOME/.bin" ]; then
+  PATH="$HOME/.bin:$PATH"
 fi
 
-ignore upper and lowercase when TAB completion
+if [ -d "$HOME/.local/bin" ]; then
+  PATH="$HOME/.local/bin:$PATH"
+fi
+
+#ignore upper and lowercase when TAB completion
 bind "set completion-ignore-case on"
 
 . /home/kim/.bash_aliases
@@ -33,16 +36,8 @@ if [ -f 'which powerline-daemon' ]; then
   /usr/share/powerline/bindings/bash/powerline.sh
 fi
 
-# function _update_ps1() {
-#   PS1=$(powerline-shell $?)
-# }
-
-# if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
-#   PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-# fi
-
-fastfetch
+# fastfetch
 
 eval "$(thefuck --alias)"
-eval "$(zoxide init bash)"
 eval "$(starship init bash)"
+eval "$(zoxide init bash)"
