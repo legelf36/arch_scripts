@@ -17,6 +17,6 @@ fi
 # Capture the current date, and store it in the format YYYY-MM-DD
 current_date=$(date +%Y-%m-%d)
 
-rsync_options="-avn --super $2/$current_date --delete"
+rsync_options="-av --super --delete"
 
 $(which rsync) $rsync_options $1 $2

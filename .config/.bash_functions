@@ -30,7 +30,7 @@ export -f ex
 # function to simplify ssh login after key has been sent
 # usage: sshin <last 3 digits in IP>
 sshin() {
-  ssh -t 192.168.0."$1"
+  ssh kim@192.168.0."$1"
   return
 }
 export -f sshin
