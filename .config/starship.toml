@@ -1,16 +1,16 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](blue)\
+[](blue1)\
 $os\
 $hostname\
 $username\
-[](bg:blue2 fg:blue)\
+[](bg:blue2 fg:blue1)\
 $directory\
-[](bg:maroon fg:blue2)\
+[](bg:blue3 fg:blue2)\
 $git_branch\
 $git_status\
-[](fg:maroon bg:green)\
+[](fg:blue3 bg:blue4)\
 $c\
 $rust\
 $golang\
@@ -21,11 +21,11 @@ $kotlin\
 $haskell\
 $python\
 $lua\
-[](fg:green bg:sapphire)\
+[](fg:blue4 bg:blue5)\
 $conda\
-[](fg:sapphire bg:blue)\
+[](fg:blue5 bg:blue1)\
 $time\
-[ ](fg:blue)\
+[ ](fg:blue1)\
 $cmd_duration\
 $line_break\
 $character"""
@@ -34,7 +34,7 @@ palette = 'catppuccin_mocha'
 
 [os]
 disabled = false
-style = "bg:blue fg:white"
+style = "bg:blue1 fg:white"
 
 [os.symbols]
 Windows = ""
@@ -60,13 +60,13 @@ RedHatEnterprise = "󱄛"
 [hostname]
 ssh_only = false
 ssh_symbol = "🌐"
-style = "bg:blue fg:white"
+style = "bg:blue1 fg:white"
 format = '[ $ssh_symbol]($style bold)[$hostname]($style)'
 disabled = false
 
 [username]
 show_always = true
-style_user = "bg:blue fg:white"
+style_user = "bg:blue1 fg:white"
 style_root = "bg:red fg:white"
 format = '[ $user ]($style)'
 
@@ -85,80 +85,91 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
-style = "bg:maroon"
-format = '[[ $symbol $branch ](fg:white bg:maroon)]($style)'
+style = "bg:blue3"
+format = '[[ $symbol $branch ](fg:white bg:blue3)]($style)'
 
 [git_status]
-style = "bg: maroon"
-format = '[[($all_status$ahead_behind )](fg:white bg:maroon)]($style)'
+style = "bg:blue3"
+format = '[[( $all_status$ahead_behind )](fg:white bg:blue3)]($style)'
+conflicted = '🏳'
+ahead = '🏎💨'
+behind = '😰'
+diverged = '😵'
+up_to_date = '✓'
+untracked = '🤷'
+stashed = '📦'
+modified = '📝'
+staged = '[++\($count\)](green)'
+renamed = '👅'
+deleted = '🗑'
 
 [nodejs]
 symbol = ""
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+style = "bg:blue4"
+format = '[[ $symbol( $version) ](fg:crust bg:blue4)]($style)'
 
 [c]
 symbol = " "
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+style = "bg:blue4"
+format = '[[ $symbol( $version) ](fg:crust bg:blue4)]($style)'
 
 [rust]
 symbol = ""
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+style = "bg:blue4"
+format = '[[ $symbol( $version) ](fg:crust bg:blue4)]($style)'
 
 [golang]
 symbol = ""
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+style = "bg:blue4"
+format = '[[ $symbol( $version) ](fg:crust bg:blue4)]($style)'
 
 [php]
 symbol = ""
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+style = "bg:blue4"
+format = '[[ $symbol( $version) ](fg:crust bg:blue4)]($style)'
 
 [java]
 symbol = " "
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+style = "bg:blue4"
+format = '[[ $symbol( $version) ](fg:crust bg:blue4)]($style)'
 
 [kotlin]
 symbol = ""
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+style = "bg:blue4"
+format = '[[ $symbol( $version) ](fg:crust bg:blue4)]($style)'
 
 [haskell]
 symbol = ""
-style = "bg:green"
-format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+style = "bg:blue4"
+format = '[[ $symbol( $version) ](fg:crust bg:blue4)]($style)'
 
 [python]
 symbol = ""
-style = "bg:green"
-format = '[[ $symbol( $version)(\(#$virtualenv\)) ](fg:crust bg:green)]($style)'
+style = "bg:blue4"
+format = '[[ $symbol( $version)(\(#$virtualenv\)) ](fg:crust bg:blue4)]($style)'
 
 [lua]
 lua_binary = 'lua'
-style = "bg:green"
-format = '[[lua 🌙( $version) ](fg:white bg:green)]($style)'
+style = "bg:blue4"
+format = '[[lua 🌙( $version) ](fg:white bg:blue4)]($style)'
 
 
 [docker_context]
 symbol = ""
-style = "bg:sapphire"
-format = '[[ $symbol( $context) ](fg:crust bg:sapphire)]($style)'
+style = "bg:blue5"
+format = '[[ $symbol( $context) ](fg:crust bg:blue5)]($style)'
 
 [conda]
 symbol = "  "
-style = "fg:crust bg:sapphire"
+style = "fg:crust bg:blue5"
 format = '[$symbol$environment ]($style)'
 ignore_base = false
 
 [time]
 disabled = false
 time_format = "%R"
-style = "bg:blue"
-format = '[[  $time ](fg:white bg:blue)]($style)'
+style = "bg:blue1"
+format = '[[  $time ](fg:white bg:blue1)]($style)'
 
 [line_break]
 disabled = false
@@ -177,7 +188,7 @@ show_milliseconds = false
 style = "fg:grey"
 format = '[ in $duration ]($style bold)'
 disabled = false
-show_notifications = true
+show_notifications = false
 min_time_to_notify = 45000
 
 [palettes.catppuccin_mocha]
@@ -194,8 +205,12 @@ brtgreen ="#00aa00"
 teal = "#94e2d5"
 sky = "#89dceb"
 sapphire = "#74c7ec"
-blue = "#003030"
-blue2 = "#005080"
+blue = "#002050"
+blue1 = "#003060"
+blue3 = "#005080"
+blue2 = "#004070"
+blue4 = "#006090"
+blue5 = "#0070A0"
 lavender = "#b4befe"
 text = "#cdd6f4"
 subtext1 = "#bac2de"
@@ -210,6 +225,10 @@ base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
 orange = "#707000"
+orange1 = "#808000"
+orange2 = "#909000"
+orange3 = "#A0A000"
+orange4 = "#B0B000"
 white = "#ffffff"
 black = '#000000'
 grey = '#333333'

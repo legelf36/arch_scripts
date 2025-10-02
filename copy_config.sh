@@ -23,6 +23,7 @@ cp -rfv ~/.config/nvim/ ~/.scripts/.config/
 cp -rfv ~/.config/superfile/ ~/.scripts/.config/
 cp -rfv ~/.config/thefuck/ ~/.scripts/.config/
 cp -rfv ~/.config/vlc/ ~/.scripts/.config/
+cp -rfv ~/.config/kitty/ ~/.scripts/.config/
 
 git add -A
 git commit -m "update config"
