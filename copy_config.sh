@@ -8,10 +8,7 @@ cp -fv ~/.config/starship.toml ~/.scripts/.config/
 # copy directories.
 cp -rfv ~/.config/ranger/ ~/.scripts/.config/
 cp -rfv ~/.config/conky/aamine* ~/.scripts/.config/conky/
-cp -rfv ~/.config/picom/ ~/.scripts/.config/
-cp -rfv ~/.config/polybar/ ~/.scripts/.config/
 cp -rfv ~/.config/rofi/ ~/.scripts/.config/
-cp -rfv ~/.config/terminator/ ~/.scripts/.config/
 cp -rfv ~/.config/thefuck/ ~/.scripts/.config/
 cp -rfv ~/.config/alacritty/ ~/.scripts/.config/
 cp -rfv ~/.config/autostart/ ~/.scripts/.config/
@@ -24,6 +21,7 @@ cp -rfv ~/.config/superfile/ ~/.scripts/.config/
 cp -rfv ~/.config/thefuck/ ~/.scripts/.config/
 cp -rfv ~/.config/vlc/ ~/.scripts/.config/
 cp -rfv ~/.config/kitty/ ~/.scripts/.config/
+cp =rfv ~/.config/waybar/ ~/.scripts/.config/
 
 git add -A
 git commit -m "update config"

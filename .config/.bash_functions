@@ -34,3 +34,10 @@ sshin() {
   return
 }
 export -f sshin
+
+# function to restart waybar
+# usage: rw
+rw() {
+  killall -SIGUSR2 waybar
+}
+export -f rw
