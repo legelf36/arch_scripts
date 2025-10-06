@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=conky
+Comment=
+Exec=conky -c /home/kim/.config/conky/aamine.conkyrc
+StartupNotify=false
+Terminal=false
+Hidden=false
+Name[en_CA]=conky.desktop
