@@ -7,7 +7,7 @@ theme = 'ayu-dark'
 editor = "nvim"
 # 
 # The editor directories will be opened with. (Leave blank to use the default editors).
-dir_editor = ""
+dir_editor = "nvim"
 #
 # Auto check for update
 auto_check_update = true
@@ -32,7 +32,7 @@ default_directory = ".config"
 file_size_use_si = false
 #
 # Default sort type (0: Name, 1: Size, 2: Date Modified, 3: Type).
-default_sort_type = 0
+default_sort_type = 2
 #
 # Default sort order (false: Ascending, true: Descending).
 sort_order_reversed = false
@@ -64,7 +64,7 @@ transparent_background = true
 file_preview_width = 0
 #
 # The length of the sidebar. If you don't want to display the sidebar, you can input 0 directly. If you want to display the value, please place it in the range of 3-20.
-sidebar_width = 20
+sidebar_width = 13
 #
 # Border style
 # Make sure to add strings exactly one character wide. Use ' ' for borderless 
@@ -86,7 +86,7 @@ border_middle_right = '┤'
 metadata = true
 #
 # Enable MD5 checksum generation for files
-enable_md5_checksum = false
+enable_md5_checksum = true
 #
 # Zoxide support for the fast navigation
 zoxide_support = true

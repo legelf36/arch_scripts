@@ -1,1 +1,2 @@
 @theme "/home/kim/.config/rofi/themes/Arthur.rasi"
+@import "/home/kim/.config/rofi/myconfig.rasi"
