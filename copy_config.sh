@@ -21,8 +21,8 @@ cp -rfv ~/.config/superfile/ ~/.scripts/config/
 cp -rfv ~/.config/thefuck/ ~/.scripts/config/
 cp -rfv ~/.config/vlc/ ~/.scripts/config/
 cp -rfv ~/.config/kitty/ ~/.scripts/config/
-cp =rfv ~/.config/waybar/ ~/.scripts/config/
+cp -rfv ~/.config/waybar/ ~/.scripts/config/
 
-git add -A
-git commit -m "update config"
-git push -u
+# git add -A
+# git commit -m "update config"
+# git push -u
