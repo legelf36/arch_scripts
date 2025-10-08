@@ -168,7 +168,7 @@ label:focus {
 #pulseaudio {
     background-color: transparent;
     font-weight: bold;
-    color: #aaaa00;
+    color: #888800;
 }
 #pulseaudio.muted {
     background-color: transparent;
@@ -184,7 +184,7 @@ label:focus {
 }
 #custom-gpuinfo {
     background:  transparent;
-    color: #33FF33;
+    color: #339933;
 }
 #custom-media {
     background-color: transparent;
@@ -199,7 +199,8 @@ label:focus {
 }
 #temperature {
     /*background-color: #c0630b;*/
-    background-color: #c0630b;
+    background-color: transparent;
+    color: #333399;
 }
 #temperature.critical {
     background-color: #eb4d4b;
