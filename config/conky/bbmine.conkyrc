@@ -1,0 +1,105 @@
+conky.config = {
+-------------------------------------
+--  Generic Settings
+-------------------------------------
+out_to_x = true,	out_to_wayland = false,background = true,	update_interval = 0.4,
+cpu_avg_samples = 2,net_avg_samples = 2,temperature_unit = 'celsius',
+imlib_cache_size=10,double_buffer = true, no_buffers = true, text_buffer_size = 2048,
+-------------------------------------
+--  Window Specifications
+-------------------------------------
+gap_x = 20, gap_y = 470,alignment = 'top_left',
+minimum_width = 390, minimum_height = 250, maximum_width = 270,
+own_window = true,own_window_class = 'Conky',own_window_type = 'normal',--own_window true options are: normal/override/dock/desktop/panel
+own_window_argb_visual = true, own_window_transparent = true,
+own_window_hints = 'undecorated,sticky,skip_taskbar,skip_pager,below',
+own_window_argb_value = 0, own_window_colour = '000000',
+border_width = 0, border_inner_margin = 0, border_outer_margin = 0,
+draw_shades = false, draw_outline = false, draw_borders = false, draw_graph_borders = false,
+-------------------------------------
+--  Text Settings
+-------------------------------------
+override_utf8_locale = true,	use_xft = true,	font = 'MesloLGM Nerd',
+xftalpha = 1.0,	uppercase = yes,
+-------------------------------------
+--  Color Scheme
+-------------------------------------
+default_color = 'DDDD88',
+color1 = 'FFFFFF', color2 = 'CCCCCC', color3 = '999999', color4 = '666666',
+color5 = '333333', color6 = '88AA44', color7 = 'AA3636', color8 = 'DDAA33',
+color9 = '0066AA',
+-------------------------------------
+--  Lua
+-------------------------------------
+lua_load = '~/.config/conky/lua/bbmine.lua',
+lua_draw_hook_post = 'main',lua_draw_hook_pre = 'background',
+}
+
+conky.text = [[
+	${goto 20}${voffset 5}${font :size=10}${color9}Cur. User${color2}: ${user_names}    \
+	${color9}Uptime${color2}: ${uptime_short}
+	${goto 20}${voffset 0}${font :size=9}${color9}Process IO.
+	${goto 20}${voffset -5}${font :size=7}${color2}${top_io name 1}\
+	${goto 100}pid: ${top_io pid 1} \
+	${goto 160}${top_io io_perc 1}% \
+	${goto 220} :${top_io user 1}
+	${goto 20}${voffset -3}${font :size=7}${color3}${top_io name 2}\
+	${goto 100}pid: ${top_io pid 2} \
+	${goto 160}${top_io io_perc 2}% \
+	${goto 220} :${top_io user 2}
+	${goto 20}${voffset -1}${font :size=6}${color4}${top_io name 3}\
+	${goto 100}pid: ${top_io pid 3} \
+	${goto 160}${top_io io_perc 3}% \
+	${goto 220} :${top_io user 3}
+	${goto 20}${voffset -0}${font :size=6}${color4}${top_io name 4}\
+	${goto 100}pid: ${top_io pid 4} \
+	${goto 160}${top_io io_perc 4}% \
+	${goto 220} :${top_io user 4}
+	${goto 20}${voffset -0}${font :size=6}${color4}${top_io name 5}\
+	${goto 100}pid: ${top_io pid 5} \
+	${goto 160}${top_io io_perc 5}% \
+	${goto 220} :${top_io user 5}
+	${goto 20}${voffset 0}${font :size=9}${color9}Process Memory
+	${goto 20}${voffset -5}${font :size=7}${color2}${top_mem name 1}\
+	${goto 100}pid: ${top_mem pid 1} \
+	${goto 160}${top_mem mem 1}M \
+	${goto 220} :${top_mem user 1}
+	${goto 20}${voffset -3}${font :size=7}${color3}${top_mem name 2}\
+	${goto 100}pid: ${top_mem pid 2} \
+	${goto 160}${top_mem mem 2}M \
+	${goto 220} :${top_mem user 2}
+	${goto 20}${voffset -1}${font :size=6}${color4}${top_mem name 3}\
+	${goto 100}pid: ${top_mem pid 3} \
+	${goto 160}${top_mem mem 3}M \
+	${goto 220} :${top_mem user 3}
+	${goto 20}${voffset -0}${font :size=6}${color4}${top_mem name 4}\
+	${goto 100}pid: ${top_mem pid 4} \
+	${goto 160}${top_mem mem 4}M \
+	${goto 220} :${top_mem user 4}
+	${goto 20}${voffset -0}${font :size=6}${color4}${top_mem name 5}\
+	${goto 100}pid: ${top_mem pid 5} \
+	${goto 160}${top_mem mem 5}M \
+	${goto 220} :${top_mem user 5}
+	${goto 20}${voffset 0}${font :size=9}${color9}Process Time
+	${goto 20}${voffset -5}${font :size=7}${color2}${top_time name 1}\
+	${goto 100}pid: ${top_time pid 1} \
+	${goto 160}${top_time cpu 1}s \
+	${goto 220} :${top_time user 1}
+	${goto 20}${voffset -3}${font :size=7}${color3}${top_time name 2}\
+	${goto 100}pid: ${top_time pid 2} \
+	${goto 160}${top_time cpu 2}s \
+	${goto 220} :${top_time user 2}
+	${goto 20}${voffset -1}${font :size=6}${color4}${top_time name 3}\
+	${goto 100}pid: ${top_time pid 3} \
+	${goto 160}${top_time cpu 3}s \
+	${goto 220} :${top_time user 3}
+	${goto 20}${voffset -0}${font :size=6}${color4}${top_time name 4}\
+	${goto 100}pid: ${top_time pid 4} \
+	${goto 160}${top_time cpu 4}s \
+	${goto 220} :${top_time user 4}
+	${goto 20}${voffset -0}${font :size=6}${color4}${top_time name 5}\
+	${goto 100}pid: ${top_time pid 5} \
+	${goto 160}${top_time cpu 5}s \
+	${goto 220} :${top_time user 5}
+	${goto 20}${voffset 5}${font :size=6}${color4}${voffset 0}${font :size=9}${color9}Processes${font :size=8}${color2}: ${processes}   \
+	${font :size=9}${color9}Running${font :size=8}${color2}: ${running_processes}${color9}    Threads${color2}: ${running_threads}]]

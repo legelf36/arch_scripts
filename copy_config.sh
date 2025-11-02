@@ -7,7 +7,7 @@ cp -fv ~/.vimrc ~/.scripts/config/
 cp -fv ~/.config/starship.toml ~/.scripts/config/
 # copy directories.
 cp -rfv ~/.config/ranger/ ~/.scripts/config/
-cp -rfv ~/.config/conky/aamine* ~/.scripts/config/conky/
+cp -rfv ~/.config/conky/*mine* ~/.scripts/config/conky/
 cp -rfv ~/.config/rofi/ ~/.scripts/config/
 cp -rfv ~/.config/thefuck/ ~/.scripts/config/
 cp -rfv ~/.config/alacritty/ ~/.scripts/config/
@@ -22,7 +22,3 @@ cp -rfv ~/.config/thefuck/ ~/.scripts/config/
 cp -rfv ~/.config/vlc/ ~/.scripts/config/
 cp -rfv ~/.config/kitty/ ~/.scripts/config/
 cp -rfv ~/.config/waybar/ ~/.scripts/config/
-
-# git add -A
-# git commit -m "update config"
-# git push -u
