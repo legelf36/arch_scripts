@@ -1,76 +1,55 @@
-conky.config = {
+ conky.config = {
 -------------------------------------
 --  Generic Settings
 -------------------------------------
-out_to_x = true,
-out_to_wayland = true,
-background = true,
-update_interval = 0.01, cpu_avg_samples = 2, net_avg_samples = 2,
-temperature_unit = 'celsius',
-double_buffer = true, no_buffers = true, text_buffer_size = 2048,
-imlib_cache_size=10,
+out_to_x = true,out_to_wayland = false,background = true,update_interval = 0.01,
+cpu_avg_samples = 2,net_avg_samples = 2,temperature_unit = 'celsius',
+double_buffer = true,no_buffers = true,text_buffer_size = 2048,imlib_cache_size=10,
 -------------------------------------
 --  Window Specifications
 -------------------------------------
-gap_x = -1900, gap_y = 20,
-minimum_width = 390, minimum_height = 460, maximum_width = 400,
-alignment = 'top_left',
-own_window = true, --own_window_class = 'Conky'
-own_window_type = 'normal',-- if own_window true options are: normal/override/dock/desktop/panel
-own_window_argb_visual = true, own_window_transparent = true,
+gap_x = 20,gap_y = 20,minimum_width = 270,minimum_height = 440,
+maximum_height = 450,maximum_width = 270,alignment = 'top_left',
+own_window = true,own_window_class = 'conky',own_window_type = 'normal',
+own_window_argb_visual = true,own_window_transparent = true,
 own_window_hints = 'undecorated,sticky,skip_taskbar,skip_pager,below',
-own_window_argb_value = 0, own_window_colour = '000000',
-border_width = 0, border_inner_margin = 0, border_outer_margin = 0,
-draw_shades = false, draw_outline = false, draw_borders = false, draw_graph_borders = false,
+own_window_argb_value = 0,own_window_colour = '000000',border_width = 0,
+border_inner_margin = 0,border_outer_margin = 0,
+draw_shades = false,draw_outline = false,draw_borders = false,draw_graph_borders = false,
 -------------------------------------
 --  Text Settings
 -------------------------------------
-override_utf8_locale = true,
-use_xft = true,
---font = 'Source Sans Pro',
---font = 'MesloLGM Nerd',
---font = 'Droid',
-font = 'Hack',
-
-xftalpha = 1.0,
-uppercase = yes,
+override_utf8_locale = true,use_xft = true,font = 'MesloLGMNerdFont',
+xftalpha = 1.0,uppercase = yes,
 -------------------------------------
 --  Color Scheme
 -------------------------------------
 default_color = 'DDDD88',
 color1 = 'FFFFFF', color2 = 'CCCCCC', color3 = '999999', color4 = '666666',
 color5 = '333333', color6 = '88AA44', color7 = 'AA3636', color8 = 'DDAA33',
-color9 = '3333AA', color10 = '006633',
+color9 = '0066AA',
 -------------------------------------
 --  Lua
 -------------------------------------
 lua_load = '~/.config/conky/lua/aamine.lua',
-lua_draw_hook_post = 'main',
-lua_draw_hook_pre = 'background'
+lua_draw_hook_post = 'main',lua_draw_hook_pre = 'background',
 }
 
 conky.text = [[
-${goto 20}${voffset 160}${font :size=7}${color3}Uplink :${upspeed enp7s0}\
-${alignr 270}${voffset 10}${upspeedgraph enp7s0 10, 100 001100 88aa88  0.3 -t -l}
-${goto 20}${voffset 0}${font :size=7}${color3}Downlink :${downspeed enp7s0}\
-${alignr 270}${voffset 10}${downspeedgraph enp7s0 10, 100 000011 8888AA  0.3 -t -l}
-${goto 20}${voffset 0}${font :size=7}${color5}${fs_bar 5,30 /home}${color3}  /home :${diskio sdb1}\
-${alignr 270}${voffset 9}${diskiograph sdb1 8,100 006633 000099 1.5 -t -l}
-${goto 20}${voffset 0}${font :size=7}${color5}${fs_bar 5,30 /mnt/wd2tb}${color3}  /wd2tb :${diskio sdc1}\
-${alignr 270}${voffset 9}${diskiograph sdc1 8,100 006633 000099 1.5 -t -l}
-${goto 20}${voffset 0}${font :size=7}${color5}${fs_bar 5,30 /mnt/sea2tb}${color3}  /sea2tb :${diskio sdd1}\
-${alignr 270}${voffset 9}${diskiograph sdd1 8,100 006633 000099 1.5 -t -l}
-${goto 20}${voffset 0}${font :size=7}${color5}${fs_bar 5,30 /}${color3}  / :${diskio sda2}\
-${alignr 270}${voffset 9}${diskiograph sda2 8,100 006633 000099 1.5 -t -l}
-${goto 20}${voffset 10}${font :size=9}${color8}Process IO.${goto 190}Process Memory
-${goto 20}${voffset -5}${font :size=7}${color2}${top_io name 1}${goto 120}${top cpu 1}% :${top user 1}${goto 190}${top_mem name 1}${goto 290}${top mem 1}M :${top user 1}
-${goto 20}${voffset -3}${font :size=7}${color3}${top_io name 2}${goto 120}${top cpu 2}% :${top user 2}${goto 190}${top_mem name 2}${goto 290}${top cpu 2}M :${top user 2}
-${goto 20}${voffset -3}${font :size=7}${color4}${top_io name 3}${goto 120}${top cpu 3}% :${top user 3}${goto 190}${top_mem name 3}${goto 290}${top cpu 3}M :${top user 3}
-${goto 20}${voffset -3}${font :size=7}${color4}${top_io name 4}${goto 120}${top cpu 4}% :${top user 4}${goto 190}${top_mem name 4}${goto 290}${top cpu 4}M :${top user 4}
-${goto 20}${voffset -3}${font :size=7}${color4}${top_io name 5}${goto 120}${top cpu 5}% :${top user 5}${goto 190}${top_mem name 5}${goto 290}${top cpu 5}M :${top user 5}
-${goto 20}${voffset -3}${font :size=7}${color4}${top_io name 6}${goto 120}${top cpu 6}% :${top user 6}${goto 190}${top_mem name 6}${goto 290}${top cpu 6}M :${top user 6}
-${goto 20}${voffset -3}${font :size=7}${color4}${top_io name 7}${goto 120}${top cpu 7}% :${top user 7}${goto 190}${top_mem name 7}${goto 290}${top cpu 7}M :${top user 7}
-${goto 20}${voffset -3}${font :size=7}${color4}${top_io name 8}${goto 120}${top cpu 8}% :${top user 8}${goto 190}${top_mem name 8}${goto 290}${top cpu 8}M :${top user 8}
-${goto 20}${voffset -3}${font :size=7}${color4}${top_io name 9}${goto 120}${top cpu 9}% :${top user 9}${goto 190}${top_mem name 9}${goto 290}${top cpu 9}M :${top user 9}
-${goto 20}${voffset -3}${font :size=7}${color4}${top_io name 10}${goto 120}${top cpu 10}% :${top user 10}${goto 190}${top_mem name 10}${goto 290}${top cpu 10}M :${top user 10}
+${goto 20}${voffset 255}${font :size=7}${color2}Uplink :${upspeed enp7s0}\
+${alignr 20}${voffset -5}${upspeedgraph enp7s0 15, 150 111100 003388  0.6 -t }
+${goto 20}${voffset -5 }${font :size=7}${color2}Downlink :${downspeed enp7s0}\
+${alignr 20}${voffset -5}${downspeedgraph enp7s0 15, 150 111100 0099FF  0.6 -t }
+${goto 20}${voffset -3}${font :size=7}${color9}${fs_bar 10,190 /home}${color2}${font :size=8}${voffset -2}  /home\
+${goto 20}${#0099DD}${voffset 9}${font :size=7}${diskio_write sdb1}${alignr 20}${voffset 0}${diskiograph_write sdb1 8, 180 222200 DD9900 1.5 -t -l}
+${goto 20}${#0099DD}${voffset -4}${font :size=7}${diskio_read sdb1}${alignr 20}${voffset 0}${diskiograph_read sdb1 8, 180 331100 0099DD 1.5 -t -l}
+${goto 20}${voffset -1}${font :size=7}${color9}${fs_bar 10,190 /}${color2}${font :size=8}${voffset -2}  /\
+${goto 20}${#0099DD}${voffset 9}${font :size=7}${diskio_write sda2}${alignr 20}${voffset 0}${diskiograph_write sda2 8, 180 222200 DD9900 1.5 -t -l}
+${goto 20}${#0099DD}${voffset -4}${font :size=7}${diskio_read sda2}${alignr 20}${voffset 0}${diskiograph_read sda2 8, 180 331100 0099DD 1.5 -t -l}
+${goto 20}${voffset -1}${font :size=7}${color9}${fs_bar 10,190 /mnt/wd2tb}${color2}${font :size=8}${voffset -2}  /wd2tb\
+${goto 20}${#0099DD}${voffset 9}${font :size=7}${diskio_write sdc1}${alignr 20}${voffset 0}${diskiograph_write sdc1 8, 180 222200 DD9900 1.5 -t -l}
+${goto 20}${#0099DD}${voffset -4}${font :size=7}${diskio_read sdc1}${alignr 20}${voffset 0}${diskiograph_read sdc1 8, 180 331100 0099DD 1.5 -t -l}
+${goto 20}${voffset -1}${font :size=7}${color9}${fs_bar 10,190 /mnt/sea2tb}${color2}${font :size=8}${voffset -2}  /sea2tb\
+${goto 20}${#0099DD}${voffset 9}${font :size=7}${diskio_write sdd1}${alignr 20}${voffset 0}${diskiograph_write sdd1 8, 180 222200 DD9900 1.5 -t -l}
+${goto 20}${#0099DD}${voffset -4}${font :size=7}${diskio_read sdd1}${alignr 20}${voffset 0}${diskiograph_read sdd1 8, 180 331100 0099DD 1.5 -t -l}
 ]];

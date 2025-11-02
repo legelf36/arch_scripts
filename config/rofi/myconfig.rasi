@@ -13,6 +13,7 @@ configuration {
 /*	on-menu-canceled: ;*/
 /*	on-menu-error: ;*/
 /*	on-screenshot-taken: ;*/
+  terminal: "alacritty";
 /*	terminal: "rofi-sensible-terminal";*/
 /*	ssh-client: "ssh";*/
 /*	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";*/
@@ -25,7 +26,7 @@ configuration {
 /*	drun-match-fields: "name,generic,exec,categories,keywords";*/
 /*	drun-categories: ;*/
 /*	drun-exclude-categories: ;*/
-/*	drun-show-actions: false;*/
+/*	drun-show-actions: true;*/
 /*	drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";*/
 /*	drun-url-launcher: "xdg-open";*/
 /*	disable-history: false;*/
@@ -38,7 +39,7 @@ configuration {
 /*	sidebar-mode: false;*/
 	hover-select: true;
 /*	eh: 1;*/
-/*	auto-select: false;*/
+	auto-select: false;
 /*	parse-hosts: false;*/
 /*	parse-known-hosts: true;*/
 /*	combi-modes: "window,run";*/
@@ -159,10 +160,11 @@ configuration {
 /*	me-accept-custom: "Control+MouseDPrimary";*/
   timeout {
       action: "kb-cancel";
-      delay:  0;
+      delay:  6;
   }
   filebrowser {
       directories-first: true;
       sorting-method:    "name";
+      show-hidden: true;
   }
 }

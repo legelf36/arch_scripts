@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=conky -c /home/kim/.config/conky/bbmine.conkyrc -d
+X-GNOME-Autostart-enabled=true
+NoDisplay=false
+Hidden=false
+Name[en_CA]=conky2
+Comment[en_CA]=No description
+X-GNOME-Autostart-Delay=0

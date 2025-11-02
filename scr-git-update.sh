@@ -1,19 +1,15 @@
 #!/bin/bash
 
-# This script is to update my 'arco-scripts' repository on github.
+# This script is to update my repository on github.
 
-# Push to the stack and move to the 'scripts' directory.
-pushd /home/kim/.scripts
+pushd /home/kim/.scripts # Push to the stack and move to the 'scripts' directory.
 
 current_date=$(date +%Y-%m-%d)
-# Add any changes to 'master' branch.
-git add -A
 
-# Commit changes to the 'master' branch.
-git commit -m "scripted update to scripts $current_date"
+git add -A # Add any changes to 'master' branch.
 
-# Push the changes to the github repository.
-git push -u
+git commit -m "scripted update to scripts $current_date" # Commit changes to the 'master' branch.
 
-# Go to previous directory and remove '.scripts' from the stack
-popd
+git push -u # Push the changes to the github repository.
+
+popd # Go to previous directory and remove '.scripts' from the stack

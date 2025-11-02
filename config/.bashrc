@@ -13,6 +13,8 @@ if [ -x /usr/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 fi
 
+force_color_prompt=yes
+
 if [ -d "$HOME/.bin" ]; then
   PATH="$HOME/.bin:$PATH"
 fi
@@ -28,8 +30,13 @@ fi
 #ignore upper and lowercase when TAB completion
 bind "set completion-ignore-case on"
 
-. /home/kim/.bash_aliases
-. /home/kim/.bash_functions
+if [ -f "$HOME/.bash_aliases" ]; then
+  . $HOME/.bash_aliases
+fi
+
+if [ -f "$HOME/.bash_functions" ]; then
+  . $HOME/.bash_functions
+fi
 
 eval "$(thefuck --alias)"
 eval "$(starship init bash)"

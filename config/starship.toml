@@ -73,7 +73,7 @@ format = '[ $user ]($style)'
 [directory]
 style = "bg:blue2 fg:white"
 format = "[ $path ]($style italic)"
-truncation_length = 6
+truncation_length = 9
 truncation_symbol = "…/"
 
 [directory.substitutions]

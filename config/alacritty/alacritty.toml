@@ -45,11 +45,12 @@ style = "Regular"
 history = 50000
 
 [window]
+decorations = "Full"
 opacity = 0.9
 
 [window.dimensions]
 columns = 130
-lines = 65
+lines = 55
 
 [window.position]
 x = 1940
