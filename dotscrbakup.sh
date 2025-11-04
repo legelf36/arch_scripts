@@ -1,5 +1,42 @@
 #!/bin/bash
 
-copy_config.sh &&
-  scr-git-update.sh &&
-  perbak.sh
+cp -fv ~/.bashrc ~/.scripts/config/
+cp -fv ~/.bash_aliases ~/.scripts/config/
+cp -fv ~/.bash_functions ~/.scripts/config/
+cp -fv ~/.vimrc ~/.scripts/config/
+cp -fv ~/.config/starship.toml ~/.scripts/config/
+# copy directories.
+cp -rfv ~/.config/ranger/ ~/.scripts/config/
+cp -rfv ~/.config/conky/*mine* ~/.scripts/config/conky/
+cp -rfv ~/.config/rofi/ ~/.scripts/config/
+cp -rfv ~/.config/thefuck/ ~/.scripts/config/
+cp -rfv ~/.config/alacritty/ ~/.scripts/config/
+cp -rfv ~/.config/autostart/ ~/.scripts/config/
+cp -rfv ~/.config/ckb-next/ ~/.scripts/config/
+cp -rfv ~/.config/hypr/ ~/.scripts/config/
+cp -rfv ~/.config/kate/ ~/.scripts/config/
+cp -rfv ~/.config/neofetch/ ~/.scripts/config/
+cp -rfv ~/.config/nvim/ ~/.scripts/config/
+cp -rfv ~/.config/superfile/ ~/.scripts/config/
+cp -rfv ~/.config/thefuck/ ~/.scripts/config/
+cp -rfv ~/.config/vlc/ ~/.scripts/config/
+cp -rfv ~/.config/kitty/ ~/.scripts/config/
+cp -rfv ~/.config/waybar/ ~/.scripts/config/
+cp -rfv ~/.config/swaync/ ~/.scripts/config/
+
+pushd /home/kim/.scripts # Push to the stack and move to the 'scripts' directory.
+current_date=$(date +%Y-%m-%d)
+git add -A # Add any changes to 'master' branch.
+git commit -m "scripted update to scripts $current_date" # Commit changes to the 'master' branch.
+git push -u # Push the changes to the github repository.
+popd # Go to previous directory and remove '.scripts' from the stack
+rsync_options="-aEP --mkpath"
+
+$(which rsync) $rsync_options /home/kim/.scripts /mnt/wd2tb/Backups/
+$(which rsync) $rsync_options /home/kim/.config /mnt/wd2tb/Backups/
+$(which rsync) $rsync_options /home/kim/projects /mnt/wd2tb/Backups/
+$(which rsync) $rsync_options /home/kim/Documents /mnt/wd2tb/Backups/
+$(which rsync) $rsync_options /home/kim/Downloads /mnt/wd2tb/Backups/
+$(which rsync) $rsync_options /home/kim/Pictures /mnt/wd2tb/Backups/
+$(which rsync) $rsync_options /home/kim/Videos /mnt/wd2tb/Backups/
+$(which rsync) $rsync_options /home/kim/Cad /mnt/wd2tb/Backups/
