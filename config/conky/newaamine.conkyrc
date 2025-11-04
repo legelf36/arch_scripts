@@ -2,14 +2,14 @@
 -------------------------------------
 --  Generic Settings
 -------------------------------------
-out_to_x = true,out_to_wayland = false,background = true,update_interval = 0.01,
+out_to_x = true,out_to_wayland = false,background = true,update_interval = 0.1,
 cpu_avg_samples = 2,net_avg_samples = 2,temperature_unit = 'celsius',
 double_buffer = true,no_buffers = true,text_buffer_size = 2048,imlib_cache_size=10,
 -------------------------------------
 --  Window Specifications
 -------------------------------------
 gap_x = 20,gap_y = 20,minimum_width = 270,minimum_height = 160,
-maximum_height = 450,maximum_width = 270,alignment = 'top_left',
+maximum_height = 200,maximum_width = 270,alignment = 'top_left',
 own_window = true,own_window_class = 'conky',own_window_type = 'normal',
 own_window_argb_visual = true,own_window_transparent = true,
 own_window_hints = 'undecorated,sticky,skip_taskbar,skip_pager,below',

@@ -62,3 +62,6 @@ ls -l && ls -al
 
 # Get UUID for the /dev/sdb1 that you want to make new /home
 sudo blkid /dev/sdb1
+
+ls -1prt | grep -v "/$" | cat -n | while read n f; do mv -n "${f}" "$(printf "%04d" $n).${f#*.}";
+ls -v | cat -n | while read n f; do mv -n "$f" "$n.jpg"; 
