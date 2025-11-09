@@ -160,7 +160,7 @@ configuration {
 /*	me-accept-custom: "Control+MouseDPrimary";*/
   timeout {
       action: "kb-cancel";
-      delay:  6;
+      delay:  0;
   }
   filebrowser {
       directories-first: true;

@@ -1,6 +1,6 @@
 # More details are at https://superfile.dev/configure/superfile-config/
 # change your theme
-theme = 'ayu-dark'
+theme = 'hacks'
 # 
 # The editor files will be opened with. (Leave blank to use the EDITOR environment variable).
 editor = 'nvim'
@@ -59,7 +59,7 @@ show_select_icons = true
 transparent_background = true
 # 
 # File preview width allow '0' (this mean same as file panel),'x' x must be less than 10 and greater than 1 (This means that the width of the file preview will be one xth of the total width.)
-file_preview_width = 3
+file_preview_width = 2
 # 
 # Whether to use the builtin syntax highlighting with chroma or use bat. Values: "" for builtin chroma, "bat" for bat
 code_previewer = ''

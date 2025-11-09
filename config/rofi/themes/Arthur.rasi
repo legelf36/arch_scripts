@@ -11,7 +11,7 @@
     dark: #1c1c1c;
     // Black
     black:       #3d352a;
-    lightblack:  #554444;
+    lightblack:  #222222;
     tlightblack:  #554444cc;
     //
     // Red
@@ -83,7 +83,7 @@ inputbar {
     padding: 11px;
     background-color: @lightblack;
     border: 2px 2px 2px 2px;
-    border-radius:  15px 15px 0px 0px;
+    border-radius:  10px 10px 0px 0px;
     border-color: @foreground;
     font: "Hack 18";
 }

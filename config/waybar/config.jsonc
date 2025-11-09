@@ -9,9 +9,9 @@
     "layer": "top",
     "output": "DP-3",
     "include": [ "~/.config/waybar/default-modules.json", ],
-    "modules-left": [ "pulseaudio", "temperature", "custom/gpuinfo", "custom/media","hyprland/workspaces", "hyprland/submap" ],
+    "modules-left": [  "temperature", "custom/gpuinfo", "custom/media","hyprland/workspaces", "hyprland/submap" ],
     //    "modules-center": [ "hyprland/window" ],
-    "modules-right": [ "clock", "tray" ],
+    "modules-right": [ "pulseaudio","clock", "tray" ],
     // Modules configuration
 
   "custom/gpuinfo": {
