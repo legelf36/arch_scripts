@@ -27,6 +27,13 @@ ex() {
 }
 export -f ex
 
+# function to copy configuration files to scripts directory
+# usage: copydots
+copydots() {
+  /home/kim/.scripts/dotscrbakup.sh
+}
+export -f copydots
+
 # function to simplify ssh login after key has been sent
 # usage: sshin <last 3 digits in IP>
 sshin() {
