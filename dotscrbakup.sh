@@ -23,13 +23,15 @@ cp -rfv ~/.config/vlc/ ~/.scripts/config/
 cp -rfv ~/.config/kitty/ ~/.scripts/config/
 cp -rfv ~/.config/waybar/ ~/.scripts/config/
 cp -rfv ~/.config/swaync/ ~/.scripts/config/
+cp -rfv ~/.config/ghostty/ ~/.scripts/config/
+cp -rfv ~/.config/FreeCAD/ ~/.scripts/config/
 
 pushd /home/kim/.scripts # Push to the stack and move to the 'scripts' directory.
 current_date=$(date +%Y-%m-%d)
-git add -A # Add any changes to 'master' branch.
+git add -A                                               # Add any changes to 'master' branch.
 git commit -m "scripted update to scripts $current_date" # Commit changes to the 'master' branch.
-git push -u # Push the changes to the github repository.
-popd # Go to previous directory and remove '.scripts' from the stack
+git push -u                                              # Push the changes to the github repository.
+popd                                                     # Go to previous directory and remove '.scripts' from the stack
 rsync_options="-aEP --mkpath"
 
 $(which rsync) $rsync_options /home/kim/.scripts /mnt/wd2tb/Backups/

@@ -23,3 +23,4 @@ cp -rfv ~/.config/vlc/ ~/.scripts/config/
 cp -rfv ~/.config/kitty/ ~/.scripts/config/
 cp -rfv ~/.config/waybar/ ~/.scripts/config/
 cp -rfv ~/.config/swaync/ ~/.scripts/config/
+cp -rfv ~/.config/ghostty/ ~/.scripts/config/

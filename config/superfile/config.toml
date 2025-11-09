@@ -1,6 +1,7 @@
 # More details are at https://superfile.dev/configure/superfile-config/
 # change your theme
-theme = 'hacks'
+theme = 'everforest-dark-medium'
+# theme = 'gruvbox-dark-hard'
 # 
 # The editor files will be opened with. (Leave blank to use the EDITOR environment variable).
 editor = 'nvim'
