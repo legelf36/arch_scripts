@@ -1,40 +1,29 @@
 #!/bin/bash
-alias ..='cd ..'                                     # back one directory
-alias ll='ls -glv --group-directories-first --color' # Long list of files (not hidden).
-alias la='ls -A --group-directories-first --color'   # List all files.
-alias lla='ls -Al --group-directories-first --color' # Long List of all files.
-alias lm='ll |more'
-alias lr='ll -R'
-alias df='df -h'
-alias ls='ls --color'
-# alias la='ls -a'
-# alias ll='ls -alFh'
-alias l='ls'
-alias l.="ls -A | egrep '^\.'"
+alias ..='cd ..'                                          # back one directory
+alias ll='ls -gv --group-directories-first --color=auto'  # Long list of files (not hidden).
+alias la='ls -a --group-directories-first --color=auto'   # List all files.
+alias lla='ls -al --group-directories-first --color=auto' # Long List of all files.
+
+alias df='df -h' # device mounted listing
 alias cd..='cd ..'
-alias pdw='pwd'
-alias yyu='yay -Syyu --noconfirm'
-#alias upate='sudo pacman -Syyu'
-#alias updte='sudo pacman -Syyu'
-#alias updqte='sudo pacman -Syyu'
-#alias upqll='paru -Syu --noconfirm'
-#alias upal='paru -Syu --noconfirm'
+alias yu='yay -Syyu'              # yay system update
+alias yyu='yay -Syyu --noconfirm' # yay system auto-update
 alias grep='grep -color'
 alias egrep='egrep -color'
 alias fgrep='fgrep -color'
+
 alias unlock="sudo rm /var/lib/pacman/db.lck"
 alias rmpacmanlock="sudo rm /var/lib/pacman/db.lck"
+
 alias free="free -mt"
 alias wget="wget -c"
-alias userlist="cut -d: -f1 /etc/passwd | sort"
-alias merge="xrdb -merge ~/.Xresources"
-alias pacman='sudo pacman --color auto'
-alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-alias install-grub-efi="sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi"
-alias bupskel='cp -Rf /etc/skel ~/.skel-backup-$(date +%Y.%m.%d-%H.%M.%S)'
+
 alias kc='killall conky'
 alias hw="hwinfo --short"
+
 alias nfstab="sudo \$EDITOR /etc/fstab"
 alias nb="\$EDITOR ~/.bashrc"
+alias nba="\$EDITOR ~/.bash_aliases"
+alias nbf="\$EDITOR ~/.bash_functions"
+
 alias sr="sudo reboot"
-alias cpcfg="/home/kim/.scripts/dotscrbakup.sh"

@@ -49,5 +49,7 @@
 # resize-overlay-duration = 4s 200ms
 font-family = "MesloLGS Nerd Font"
 font-size = 9
-background = 000000
+theme = Fahrenheit
 background-opacity = 0.85
+window-height = 800
+window-width = 500
