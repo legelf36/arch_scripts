@@ -1,5 +1,6 @@
 #!/bin/bash
-alias ..='cd ..'                                          # back one directory
+alias ..='cd ..' # back one directory
+alias ls='ls --color=auto'
 alias ll='ls -gv --group-directories-first --color=auto'  # Long list of files (not hidden).
 alias la='ls -a --group-directories-first --color=auto'   # List all files.
 alias lla='ls -al --group-directories-first --color=auto' # Long List of all files.

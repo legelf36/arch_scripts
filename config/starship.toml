@@ -3,8 +3,6 @@
 format = """
 [](clr1)\
 $os\
-$hostname\
-$username\
 [](bg:clr2 fg:clr1)\
 $directory\
 [](bg:clr3 fg:clr2)\

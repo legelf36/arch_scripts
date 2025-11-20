@@ -3992,7 +3992,7 @@ audio-resampler=any
 snapshot-path=/mnt/sea2tb/Pics/Adult/Pics
 
 # Video snapshot file prefix (string)
-snapshot-prefix=
+snapshot-prefix=A
 
 # Video snapshot format (string)
 snapshot-format=jpg
