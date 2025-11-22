@@ -25,6 +25,12 @@ cp -rfv ~/.config/waybar/ ~/.scripts/config/
 cp -rfv ~/.config/swaync/ ~/.scripts/config/
 cp -rfv ~/.config/ghostty/ ~/.scripts/config/
 cp -rfv ~/.config/FreeCAD/ ~/.scripts/config/
+cp -rfv ~/.config/yazi/ ~/.scripts/config/
+cp -rfv ~/.config/darktable/ ~/.scripts/config/
+cp -rfv ~/.config/krokiet/ ~/.scripts/config/
+cp -rfv ~/.config/btop/ ~/.scripts/config/
+cp -rfv ~/.config/shotwell/ ~/.scripts/config/
+cp -rfv ~/.config/yay/ ~/.scripts/config/
 
 pushd /home/kim/.scripts # Push to the stack and move to the 'scripts' directory.
 current_date=$(date +%Y-%m-%d)
