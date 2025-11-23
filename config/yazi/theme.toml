@@ -10,11 +10,13 @@
 # : Flavor {{{
 
 [flavor]
-dark  = "ayu-dark"
+# dark  = "ayu-dark"
+dark = "catppuccin-mocha"
 # dark = "catppuccin-frappe"
 # dark = "everforest-medium"
 # dark = "ashen"
 # dark = "tokyo-night"
-light = "ayu-dark"
+# light = "ayu-dark"
+# light = "catppuccin-mocha"
 # light = "catppuccin-frappe"
 

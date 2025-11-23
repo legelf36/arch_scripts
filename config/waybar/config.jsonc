@@ -1,15 +1,15 @@
 // -*- mode: jsonc -*-
 {
-    // "layer": "top", // Waybar at top layer
+    "layer": "bottom", // "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 24, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
+    "width": 1900, // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "layer": "top",
+    // "layer": "top",
     "output": "DP-3",
     "include": [ "~/.config/waybar/default-modules.json", ],
-    "modules-left": [  "temperature", "custom/gpuinfo", "custom/media","hyprland/workspaces", "hyprland/submap" ],
+    "modules-left": [  "temperature", "custom/gpuinfo","hyprland/workspaces", "hyprland/submap" ],
     //    "modules-center": [ "hyprland/window" ],
     "modules-right": [ "pulseaudio","clock", "tray" ],
     // Modules configuration
@@ -24,18 +24,7 @@
 //    "format-icons": ["󰝦", "󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥"],
     "tooltip": true
   },
-    "custom/media": {
-        "format": "{icon} {text}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    },
+
     "custom/power": {
         "format" : "⏻ ",
 		"tooltip": false,

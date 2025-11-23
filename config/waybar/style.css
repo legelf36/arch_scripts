@@ -14,6 +14,7 @@ window#waybar {
     color: #bbbbbb;
     transition-property: background-color;
     transition-duration: .5s;
+    padding: 0 5px;
 }
 window#waybar.hidden {
     opacity: 0.2;
@@ -43,13 +44,13 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px transparent;
+    box-shadow: inset 0 -3px #0000FF;
     color: #0000cc;
 }
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
     background-color: #000000;
-    color: #ff9900;
+    color: #0099FF;
 }
 #workspaces button {
     padding: 0 1px;
@@ -105,8 +106,8 @@ button:hover {
     margin-right: 0;
 }
 #clock {
-    background-color: #0000AA;
-    color: #00FFFF;
+    background-color: #000000;
+    color: #00bbFF;
 /*    padding: 10 5px;*/
     border: 5px #000000;
     border-radius: 20;
@@ -150,7 +151,7 @@ button:hover {
     background-color: #2ecc71;
     color: #000000;
 }
-label:focus {
+#label:focus {
     background-color: #000000;
 }
 #cpu {
@@ -175,7 +176,7 @@ label:focus {
 #pulseaudio {
     background-color: #000000;
     font-weight: bold;
-    color: #888800;
+    color: #00bbff;
     border: 1px #000000;
     border-radius: 20;
 }

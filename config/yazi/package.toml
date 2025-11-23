@@ -25,3 +25,8 @@ hash = "f9aed559dc6820dbc7253253be1bb6d2"
 use = "BennyOe/tokyo-night"
 rev = "5f56364"
 hash = "c0bf69ad2c44005892d586e9693993c6"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-mocha"
+rev = "ba27774"
+hash = "14b111562c00eb1917fe3ca3ae9bb771"
