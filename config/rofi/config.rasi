@@ -1,2 +1,3 @@
-@theme "/home/kim/.config/rofi/themes/Arthur.rasi"
+/* @theme "/home/kim/.config/rofi/themes/Arthur.rasi" */
+@theme "/home/kim/.cache/wal/colors-rofi-dark.rasi"
 @import "/home/kim/.config/rofi/myconfig.rasi"

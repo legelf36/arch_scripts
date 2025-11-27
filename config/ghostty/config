@@ -49,7 +49,7 @@
 # resize-overlay-duration = 4s 200ms
 font-family = "MesloLGS Nerd Font"
 font-size = 9
-theme = Under The Sea
+theme = "/home/kim/.cache/wal/ghostty.conf"
 background-opacity = 0.85
 window-height = 800
 window-width = 500

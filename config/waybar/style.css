@@ -1,3 +1,4 @@
+@import url('file:///home/kim/.cache/wal/colors-waybar.css');
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif, Hack;
@@ -10,7 +11,7 @@ window#waybar {
     /*background-color: rgba(43, 48, 59, 0.5);*/
     /*background-color: rgba(0, 0, 0, 0.5);*/
     background-color: transparent;
-    border-bottom: 0px solid rgba(100, 114, 125, 0.5);
+    border-bottom: 0px solid @color1;
     color: #bbbbbb;
     transition-property: background-color;
     transition-duration: .5s;
@@ -26,7 +27,7 @@ window#waybar.empty {
 window#waybar.solo {
     background-color: #FFFFFF;
 }
-*/
+
 window#waybar.termite {
     background-color: #3F3F3F;
 }
@@ -34,6 +35,8 @@ window#waybar.chromium {
     background-color: #000000;
     border: none;
 }
+*/
+
 button {
     /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -3px transparent;
@@ -44,16 +47,16 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px #0000FF;
-    color: #0000cc;
+    box-shadow: inset 0 -3px @color4;
+    color: @color7;
 }
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
-    background-color: #000000;
+    background-color: @color0;
     color: #0099FF;
 }
 #workspaces button {
-    padding: 0 1px;
+    padding: 0 0px;
     background-color: transparent;
     color: #cccccc;
 }
@@ -91,11 +94,11 @@ button:hover {
 
 #mpd {
     padding: 0 10px;
-    color: #ffffff;
+    color: @color7;
 }
 #window,
 #workspaces {
-    margin: 0 4px;
+    margin: 0 0px;
 }
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
@@ -106,24 +109,24 @@ button:hover {
     margin-right: 0;
 }
 #clock {
-    background-color: #000000;
-    color: #00bbFF;
+    background-color: @color1;
+    color: @color7;
 /*    padding: 10 5px;*/
-    border: 5px #000000;
+    border: 5px @color0;
     border-radius: 20;
 }
 #battery {
-    background-color: #ffffff;
+    background-color: @color7;
     color: #000000;
 }
 #battery.charging, #battery.plugged {
-    color: #ffffff;
+    color: @color7;
     background-color: #26A65B;
 }
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: @color7;
+        color: @color0;
     }
 }
 /* Using steps() instead of linear as a timing function to limit cpu usage */
@@ -155,8 +158,8 @@ button:hover {
     background-color: #000000;
 }
 #cpu {
-    background-color: #2ecc71;
-    color: #000000;
+    background-color: @color7;
+    color: @color0;
 }
 #memory {
     background-color: #9b59b6;
@@ -174,10 +177,10 @@ button:hover {
     background-color: #f53c3c;
 }
 #pulseaudio {
-    background-color: #000000;
+    background-color: @color1;
     font-weight: bold;
-    color: #00bbff;
-    border: 1px #000000;
+    color: @color7;
+    border: 1px @color0;
     border-radius: 20;
 }
 #pulseaudio.muted {
@@ -194,10 +197,10 @@ button:hover {
 }
 #custom-gpuinfo {
     /*background:  transparent;*/
-    background-color: #000000;
-    color: #339933;
+    background-color: @color1;
+    color: @color7;
     font-weight: bold;
-    border: 1px #000000;
+    border: 1px @color0;
     border-radius: 20;
 }
 #custom-media {
@@ -213,10 +216,10 @@ button:hover {
 }
 #temperature {
     /*background-color: #c0630b;*/
-    background-color: #000000;
-    color: #11cc66;
+    background-color: @color1;
+    color: @color7;
     font-weight: bold;
-    border: 1px #000000;
+    border: 1px @color0;
     border-radius: 20;
 }
 #temperature.critical {

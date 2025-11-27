@@ -3,23 +3,23 @@
     "layer": "bottom", // "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 24, // Waybar height (to be removed for auto height)
-    "width": 1900, // "width": 1280, // Waybar width
+    "margin-top": 13,
+    "width": 1300, // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     // "layer": "top",
     "output": "DP-3",
     "include": [ "~/.config/waybar/default-modules.json", ],
-    "modules-left": [  "temperature", "custom/gpuinfo","hyprland/workspaces", "hyprland/submap" ],
-    //    "modules-center": [ "hyprland/window" ],
+    "modules-left": [  "temperature", "custom/gpuinfo", "hyprland/submap" ],
+    "modules-center": [ "hyprland/workspaces" ],
     "modules-right": [ "pulseaudio","clock", "tray" ],
     // Modules configuration
 
   "custom/gpuinfo": {
     "format": "GPU: {}°C ",
     "exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits",
-//    "format-alt": "GPU: {}°C ",
-//    "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
-//    "exec-alt": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits",
+    "format-alt": "GPU: {}% ",
+    "exec-alt": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
     "interval": 1,
 //    "format-icons": ["󰝦", "󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥"],
     "tooltip": true

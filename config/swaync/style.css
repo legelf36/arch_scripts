@@ -1,3 +1,4 @@
+@import url('file:///home/kim/.cache/wal//colors-waybar.css');
 :root {
   --cc-bg: rgba(46, 46, 46, 0.7);
   --noti-border-color: rgba(225, 225, 255, 0.15);
@@ -48,22 +49,22 @@ notificationwindow, blankwindow, blankwindow {
 
 .close-button {
   /* The notification Close Button */
-  background: var(--noti-close-bg);
-  color: var(--text-color);
-  text-shadow: none;
+  background: @color1;
+  color: @foreground;
+  text-shadow: @color0;
   padding: 0;
   border-radius: 100%;
   margin-top: 8px;
   margin-right: 8px;
-  box-shadow: none;
-  border: none;
+  box-shadow: @color1;
+  border: @color0;
   min-width: 24px;
   min-height: 24px;
 }
 
 .close-button:hover {
   box-shadow: none;
-  background: var(--noti-close-bg-hover);
+  background: @color1;
   transition: var(--hover-tranistion);
   border: none;
 }
@@ -74,7 +75,7 @@ notificationwindow, blankwindow, blankwindow {
 }
 
 .notification-row:focus {
-  background: var(--noti-bg-focus);
+  background: @color1;
 }
 
 .notification-row .notification-background {
@@ -84,12 +85,12 @@ notificationwindow, blankwindow, blankwindow {
 .notification-row .notification-background .notification {
   /* The actual notification */
   border-radius: var(--border-radius);
-  border: var(--border);
+  border: 2px solid @color6;
   padding: 5px 10px;
-  margin-bottom: 180px;
+  margin-bottom: 100px;:
   transition: var(--hover-tranistion);
-  background: rgba(var(--noti-bg), var(--noti-bg-alpha));
-  color: rgba(225, 225, 255, 0.15);
+  background: @color2;
+  color: @color0;
 }
 
 .notification-row .notification-background .notification.low {
@@ -111,14 +112,14 @@ notificationwindow, blankwindow, blankwindow {
   box-shadow: none;
   background: transparent;
   border: none;
-  color: var(--text-color);
+  color: @color5;
   transition: var(--hover-tranistion);
   border-radius: var(--border-radius);
 }
 
 .notification-row .notification-background .notification .notification-default-action:hover {
   -gtk-icon-filter: none;
-  background: var(--noti-bg-hover);
+  background: @color3;
 }
 
 .notification-row .notification-background .notification .notification-default-action:not(:only-child) {
@@ -160,7 +161,7 @@ notificationwindow, blankwindow, blankwindow {
   font-size: var(--font-size-summary);
   font-weight: bold;
   background: transparent;
-  color: var(--text-color);
+  color: @foreground;
   text-shadow: none;
 }
 
@@ -169,7 +170,7 @@ notificationwindow, blankwindow, blankwindow {
   font-size: var(--font-size-summary);
   font-weight: bold;
   background: transparent;
-  color: var(--text-color);
+  color: @foreground;
   text-shadow: none;
   margin-right: 30px;
 }
@@ -179,7 +180,7 @@ notificationwindow, blankwindow, blankwindow {
   font-size: var(--font-size-body);
   font-weight: normal;
   background: transparent;
-  color: var(--text-color);
+  color: @foreground;
   text-shadow: none;
 }
 
@@ -201,30 +202,30 @@ notificationwindow, blankwindow, blankwindow {
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-entry {
-  background: var(--noti-bg-darker);
-  color: var(--text-color);
-  caret-color: var(--text-color);
-  border: var(--border);
+  background: @background;
+  color: @foreground;
+  caret-color: @color6;
+  border: @background;
   border-radius: var(--border-radius);
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-button {
   margin-left: 4px;
-  background: rgba(var(--noti-bg), var(--noti-bg-alpha));
-  border: var(--border);
+  background: rgba(@background, var(--noti-bg-alpha));
+  border: @background;
   border-radius: var(--border-radius);
-  color: var(--text-color);
+  color: @foreground;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-button:disabled {
   background: initial;
-  color: var(--text-color-disabled);
-  border: var(--border);
+  color: @color1;
+  border: @color0;
   border-color: transparent;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-button:hover {
-  background: var(--noti-bg-hover);
+  background: @background;
 }
 
 .notification-row .notification-background .notification .notification-alt-actions {
@@ -242,7 +243,7 @@ notificationwindow, blankwindow, blankwindow {
 
 .notification-row .notification-background .notification .notification-action > button {
   border-radius: var(--border-radius);
-  color: var(--text-color);
+  color: @foreground;
 }
 
 .notification-group {
@@ -252,7 +253,7 @@ notificationwindow, blankwindow, blankwindow {
 }
 
 .notification-group:focus {
-  background: var(--noti-bg-focus);
+  background: @background;
 }
 
 .notification-group.low {
@@ -273,7 +274,7 @@ notificationwindow, blankwindow, blankwindow {
 
 .notification-group .notification-group-buttons, .notification-group .notification-group-headers {
   margin: 0 16px;
-  color: var(--text-color);
+  color: @foreground;
 }
 
 .notification-group .notification-group-headers {
@@ -281,12 +282,12 @@ notificationwindow, blankwindow, blankwindow {
 }
 
 .notification-group .notification-group-headers .notification-group-icon {
-  color: var(--text-color);
+  color: @foreground;
   -gtk-icon-size: var(--notification-group-icon-size);
 }
 
 .notification-group .notification-group-headers .notification-group-header {
-  color: var(--text-color);
+  color: @foreground;
 }
 
 .notification-group .notification-group-buttons {
@@ -302,7 +303,7 @@ notificationwindow, blankwindow, blankwindow {
 }
 
 .notification-group.collapsed .notification-row .notification {
-  background-color: rgba(var(--noti-bg), 1);
+  background-color: rgba(@color0, 1);
 }
 
 .notification-group.collapsed .notification-row:not(:last-child) {
@@ -316,13 +317,13 @@ notificationwindow, blankwindow, blankwindow {
 }
 
 .notification-group.collapsed:hover .notification-row:not(:only-child) .notification {
-  background-color: var(--noti-bg-hover);
+  background-color: @background;
 }
 
 .control-center {
   /* The Control Center which contains the old notifications + widgets */
-  background: var(--cc-bg);
-  color: var(--text-color);
+  background: @color2;
+  color: @foreground;
   border-radius: var(--border-radius);
 }
 
@@ -333,11 +334,11 @@ notificationwindow, blankwindow, blankwindow {
 
 .control-center .control-center-list {
   /* List of notifications */
-  background: transparent;
+  background: @color1;
 }
 
 .control-center .control-center-list .notification {
-  box-shadow: var(--notification-shadow);
+  box-shadow: @color1;
 }
 
 .control-center .control-center-list .notification .notification-default-action,
@@ -347,7 +348,7 @@ notificationwindow, blankwindow, blankwindow {
 
 .control-center .control-center-list .notification .notification-default-action:hover,
 .control-center .control-center-list .notification .notification-action:hover {
-  background-color: var(--noti-bg-hover);
+  background-color: @color1;
 }
 
 .blank-window {
@@ -383,7 +384,7 @@ notificationwindow, blankwindow, blankwindow {
 
 /* DND widget */
 .widget-dnd label {
-  color: var(--text-color);
+  color: @foreground;
   margin-right: 8px;
   font-size: 1.1rem;
 }
@@ -539,7 +540,7 @@ notificationwindow, blankwindow, blankwindow {
 }
 
 .per-app-volume {
-  background-color: var(--noti-bg-darker);
+  background-color: @color1;
   margin: 8px;
   margin-bottom: 0;
   border-radius: var(--border-radius);
