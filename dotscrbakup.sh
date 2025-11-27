@@ -6,6 +6,8 @@ cp -fv ~/.bash_functions ~/.scripts/config/
 cp -fv ~/.vimrc ~/.scripts/config/
 cp -fv ~/.config/starship.toml ~/.scripts/config/
 # copy directories.
+cp -rfv ~/.config/wal/ ~/.scripts/config/
+cp -rfv ~/.config/yazi/ ~/.scripts/config/
 cp -rfv ~/.config/ranger/ ~/.scripts/config/
 cp -rfv ~/.config/conky/*mine* ~/.scripts/config/conky/
 cp -rfv ~/.config/rofi/ ~/.scripts/config/

@@ -4,10 +4,9 @@
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 24, // Waybar height (to be removed for auto height)
     "margin-top": 13,
-    "width": 1300, // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
+    "width": 1100, // "width": 1280, // Waybar width
+    "spacing": 14, // Gaps between modules (4px)
     // Choose the order of the modules
-    // "layer": "top",
     "output": "DP-3",
     "include": [ "~/.config/waybar/default-modules.json", ],
     "modules-left": [  "temperature", "custom/gpuinfo", "hyprland/submap" ],
