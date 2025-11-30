@@ -35,5 +35,23 @@ lua_load = '~/.config/conky/lua/newaamine.lua',
 lua_draw_hook_post = 'main',lua_draw_hook_pre = 'background',
 }
 
-conky.text = [[]]
+conky.text = [[
+${goto 20}${voffset 135}${font :size=9}${color1}Vim Keys${goto 150}Hyprland Keys
+${goto 20}${font :size=7}${color2}/ = find${goto 70}u = undo${goto 150}Sup + q  = quit window
+${goto 20}${font :size=7}${color2}y = copy${goto 70}p = paste${goto 150}Sup + e  = logout
+${goto 20}${font :size=7}${color2}o = new line below cur${goto 150}Sup + v  = float toggle
+${goto 20}${font :size=7}${color2}Ctl+w, s = split win horz${goto 150}Sup + b  = Brave browser
+${goto 20}${font :size=7}${color2}Ctl+w, v = split win vert${goto 150}Sup + Return  = terminal
+${goto 20}${voffset 5}${font :size=9}${color1}Yazi Keys
+${goto 20}${voffset 0}${font :size=7}${color2}. = show hidden${goto 150}d = trash file
+${goto 20}${voffset 0}${font :size=7}${color2}, m = sort by mod time${goto 150}D = perm. delete
+${goto 20}${voffset 0}${font :size=7}${color2}, a = sort by alphabet${goto 150}a = create file/folder
+${goto 20}${voffset 0}${font :size=7}${color2}[ = previous tab${goto 150}r = rename file 
+${goto 20}${voffset 0}${font :size=7}${color2}] = next tab${goto 150}Z = zoxide plugin
+${goto 20}${voffset 0}${font :size=7}${color2}/ = find next file${goto 150}S = search content (ripgrep)
+${goto 20}${voffset 0}${font :size=7}${color2}? = find previous file 
+${goto 20}${voffset 0}${font :size=7}${color2}n = found next
+${goto 20}${voffset 0}${font :size=7}${color2}N = found prevoius
+
+]]
 ;

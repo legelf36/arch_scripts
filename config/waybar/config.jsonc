@@ -11,7 +11,7 @@
     "include": [ "~/.config/waybar/default-modules.json", ],
     "modules-left": [  "temperature", "custom/gpuinfo", "hyprland/submap" ],
     "modules-center": [ "hyprland/workspaces" ],
-    "modules-right": [ "pulseaudio","clock", "tray" ],
+    "modules-right": [ "pulseaudio", "tray" ,"clock" ],
     // Modules configuration
 
   "custom/gpuinfo": {

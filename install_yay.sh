@@ -17,10 +17,11 @@ sudo chown -R kim:kim ./yay
 # Move to the directory and compile.
 
 cd yay
-makepkg -$1
+makepkg -si
 
 # --Spoiler--
 # If you are using 'Manjaro Linux' you can install from the community repo.
 
 # pacman -Syyu
 # pacman -S yay
+
