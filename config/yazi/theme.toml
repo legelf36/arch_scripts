@@ -11,9 +11,9 @@
 
 [flavor]
 # dark  = "ayu-dark"
-dark = "catppuccin-mocha"
+# dark = "catppuccin-mocha"
 # dark = "catppuccin-frappe"
-# dark = "everforest-medium"
+dark = "everforest-medium"
 # dark = "ashen"
 # dark = "tokyo-night"
 # light = "ayu-dark"

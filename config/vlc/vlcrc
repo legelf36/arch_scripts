@@ -4061,7 +4061,7 @@ snapshot-sequential=1
 #deinterlace-mode=auto
 
 # Video output module (string)
-vout=xcb_x11
+vout=any
 
 # Video filter module (string)
 video-filter=rotate
@@ -4538,7 +4538,7 @@ metadata-network-access=1
 #global-key-jump-extrashort=
 
 # Very short backwards jump (string)
-#key-jump-extrashort=Shift+Left
+key-jump-extrashort=Down
 
 # Very short forward jump (string)
 #global-key-jump+extrashort=
@@ -4586,7 +4586,7 @@ metadata-network-access=1
 #global-key-frame-next=
 
 # Next frame (string)
-#key-frame-next=e	Browser Next
+key-frame-next=Up
 
 # Activate (string)
 #global-key-nav-activate=
@@ -4598,13 +4598,13 @@ metadata-network-access=1
 #global-key-nav-up=
 
 # Navigate up (string)
-#key-nav-up=Up
+key-nav-up=
 
 # Navigate down (string)
 #global-key-nav-down=
 
 # Navigate down (string)
-#key-nav-down=Down
+key-nav-down=
 
 # Navigate left (string)
 #global-key-nav-left=
@@ -4658,13 +4658,13 @@ metadata-network-access=1
 #global-key-vol-up=
 
 # Volume up (string)
-#key-vol-up=Ctrl+Up	Volume Up
+key-vol-up=
 
 # Volume down (string)
 #global-key-vol-down=
 
 # Volume down (string)
-#key-vol-down=Ctrl+Down	Volume Down
+key-vol-down=
 
 # Mute (string)
 #global-key-vol-mute=

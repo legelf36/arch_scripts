@@ -43,15 +43,36 @@ ${goto 20}${font :size=7}${color2}o = new line below cur${goto 150}Sup + v  = fl
 ${goto 20}${font :size=7}${color2}Ctl+w, s = split win horz${goto 150}Sup + b  = Brave browser
 ${goto 20}${font :size=7}${color2}Ctl+w, v = split win vert${goto 150}Sup + Return  = terminal
 ${goto 20}${voffset 5}${font :size=9}${color1}Yazi Keys
-${goto 20}${voffset 0}${font :size=7}${color2}. = show hidden${goto 150}d = trash file
-${goto 20}${voffset 0}${font :size=7}${color2}, m = sort by mod time${goto 150}D = perm. delete
-${goto 20}${voffset 0}${font :size=7}${color2}, a = sort by alphabet${goto 150}a = create file/folder
-${goto 20}${voffset 0}${font :size=7}${color2}[ = previous tab${goto 150}r = rename file 
-${goto 20}${voffset 0}${font :size=7}${color2}] = next tab${goto 150}Z = zoxide plugin
-${goto 20}${voffset 0}${font :size=7}${color2}/ = find next file${goto 150}S = search content (ripgrep)
+${goto 20}${voffset 0}${font :size=7}${color2}. = show hidden
+${goto 20}${voffset 0}${font :size=7}${color2}, m = sort by mod time
+${goto 20}${voffset 0}${font :size=7}${color2}, a = sort by alphabet
+${goto 20}${voffset 0}${font :size=7}${color2}[ = previous tab
+${goto 20}${voffset 0}${font :size=7}${color2}] = next tab
+${goto 20}${voffset 0}${font :size=7}${color2}/ = find next filei
 ${goto 20}${voffset 0}${font :size=7}${color2}? = find previous file 
 ${goto 20}${voffset 0}${font :size=7}${color2}n = found next
 ${goto 20}${voffset 0}${font :size=7}${color2}N = found prevoius
+${goto 20}${voffset 0}${font :size=7}${color2}d = trash file
+${goto 20}${voffset 0}${font :size=7}${color2}D = perm. delete
+${goto 20}${voffset 0}${font :size=7}${color2}x = cut
+${goto 20}${voffset 0}${font :size=7}${color2}v = paste
+${goto 20}${voffset 0}${font :size=7}${color2}a = create file/folder
+${goto 20}${voffset 0}${font :size=7}${color2}r = rename file 
+${goto 20}${voffset 0}${font :size=7}${color2}Z = zoxide plugin
+${goto 20}${voffset 0}${font :size=7}${color2}S = search content (ripgrep)
+${goto 20}${voffset 5}${font :size=9}${color1}Bash Keys
+${goto 20}${voffset 0}${font :size=7}${color2}la = list all files
+${goto 20}${voffset 0}${font :size=7}${color2}ll = long list files
+${goto 20}${voffset 0}${font :size=7}${color2}lla = long list all files
+${goto 20}${voffset 0}${font :size=7}${color2}yu = system update
+${goto 20}${voffset 0}${font :size=7}${color2}yyu = unattended update
+${goto 20}${voffset 0}${font :size=7}${color2}kc = kill conkys'
+${goto 20}${voffset 0}${font :size=7}${color2}nb = edit .bashrc
+${goto 20}${voffset 0}${font :size=7}${color2}nba = edit .bash_aliases
+${goto 20}${voffset 0}${font :size=7}${color2}nbf = edit .bash_functions
+${goto 20}${voffset 0}${font :size=7}${color2}copydots = backup config & home
+${goto 20}${voffset 0}${font :size=7}${color2}sshin 123 = ssh login
+${goto 20}${voffset 0}${font :size=7}${color2}y = yazi
 
 ]]
 ;

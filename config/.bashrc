@@ -5,6 +5,11 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 export HISTCONTROL=ignoreboth:erasedups
 export PAGER='most'
+export QT_QPA_PLATFORMTHEME=qt5ct
+
+# Pywal
+(cat ~/.cache/wal/sequences &)
+source ~/.cache/wal/colors-tty.sh
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -12,7 +17,6 @@ export PAGER='most'
 if [ -x /usr/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 fi
-
 force_color_prompt=yes
 
 if [ -d "$HOME/.bin" ]; then

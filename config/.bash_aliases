@@ -26,5 +26,5 @@ alias nfstab="sudo \$EDITOR /etc/fstab"
 alias nb="\$EDITOR ~/.bashrc"
 alias nba="\$EDITOR ~/.bash_aliases"
 alias nbf="\$EDITOR ~/.bash_functions"
-
+alias nc="\$EDITOR ~/.config/conky/newaamine.conkyrc"
 alias sr="sudo reboot"

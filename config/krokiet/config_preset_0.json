@@ -1,6 +1,6 @@
 {
   "included_directories": [
-    "/mnt/sea2tb/Pics/Adult/Pics"
+    "/mnt/sea2tb/Pics/Adult/Pics/Archive"
   ],
   "included_directories_referenced": [],
   "excluded_directories": [
@@ -32,8 +32,8 @@
   "similar_videos_delete_outdated_entries": true,
   "similar_music_delete_outdated_entries": true,
   "similar_images_sub_hash_size": "64",
-  "similar_images_sub_hash_alg": "mean",
-  "similar_images_sub_resize_algorithm": "nearest",
+  "similar_images_sub_hash_alg": "median",
+  "similar_images_sub_resize_algorithm": "triangle",
   "similar_images_sub_ignore_same_size": false,
   "similar_images_sub_similarity": 40,
   "duplicates_sub_check_method": "hash",
@@ -43,7 +43,7 @@
   "biggest_files_sub_number_of_files": 50,
   "similar_videos_hide_hard_links": true,
   "similar_videos_sub_ignore_same_size": false,
-  "similar_videos_sub_similarity": 10,
+  "similar_videos_sub_similarity": 3,
   "similar_music_sub_audio_check_type": "fingerprint",
   "similar_music_sub_approximate_comparison": false,
   "similar_music_compare_fingerprints_only_with_similar_titles": true,

@@ -49,6 +49,14 @@ rw() {
 }
 export -f rw
 
+# Update PyWal with new image to create colors
+# usage: pywal /path/to/image.png
+pywal() {
+  wal -i "$1"
+}
+export -f pywal
+
+# function to start yazi and stay in current directory after yazi exits
 y() {
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
   yazi "$@" --cwd-file="$tmp"
