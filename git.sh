@@ -2,6 +2,8 @@
 
 # github personal access token April 2nd 2022
 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
+May 14th, 2026
+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
 
 # Commit changes to the 'master' branch.
 git commit -m "update to scripts"
