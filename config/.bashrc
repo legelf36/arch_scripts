@@ -1,47 +1,34 @@
-#!/bin/bash
+#
+# ~/.bashrc
+#
 
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+# Pywa
+cat ~/.cache/wal/sequences
+# source ~/.cache/wal/colors.sh
 ###EXPORT###
 export EDITOR='nvim'
 export VISUAL='nvim'
 export HISTCONTROL=ignoreboth:erasedups
 export PAGER='most'
-export QT_QPA_PLATFORMTHEME=qt5ct
-
-# Pywal
-(cat ~/.cache/wal/sequences &)
-source ~/.cache/wal/colors-tty.sh
-
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-if [ -x /usr/bin/dircolors ]; then
-  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-fi
-force_color_prompt=yes
-
-if [ -d "$HOME/.bin" ]; then
-  PATH="$HOME/.bin:$PATH"
-fi
-
-if [ -d "$HOME/.local/bin" ]; then
-  PATH="$HOME/.local/bin:$PATH"
-fi
-
-if [ -d "$HOME/.scripts" ]; then
-  PATH="$HOME/.scripts:$PATH"
-fi
+# export STARSHIP_CONFIG="$HOME/.config/starship/wal_palette.toml:$HOME/.config/starship.toml"
 
 #ignore upper and lowercase when TAB completion
 bind "set completion-ignore-case on"
 
-if [ -f "$HOME/.bash_aliases" ]; then
-  . $HOME/.bash_aliases
-fi
+force_color_prompt=yes
 
-if [ -f "$HOME/.bash_functions" ]; then
-  . $HOME/.bash_functions
-fi
+[ -d "$HOME/.bin" ] && PATH="$HOME/.bin:$PATH"
 
-eval "$(thefuck --alias)"
-eval "$(starship init bash)"
+[ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
+
+[ -d "$HOME/.scripts" ] && PATH="$HOME/.scripts:$PATH"
+
+[ -f "$HOME/.bash_aliases" ] && . $HOME/.bash_aliases
+
+[ -f "$HOME/.bash_functions" ] && . $HOME/.bash_functions
+
+PS1='[\u@\h \W]\$ '
 eval "$(zoxide init bash)"
+eval "$(starship init bash)"

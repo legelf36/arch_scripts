@@ -1,0 +1,1 @@
+conky -c /home/kim/.config/conky/Arco-Redux-LUA-cinn.conkyrc & sleep 1s

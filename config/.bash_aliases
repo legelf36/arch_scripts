@@ -9,7 +9,7 @@ alias df='df -h' # device mounted listing
 alias cd..='cd ..'
 alias yu='yay -Syyu'              # yay system update
 alias yyu='yay -Syyu --noconfirm' # yay system auto-update
-alias grep='grep -color'
+alias grep='grep --color=auto'
 alias egrep='egrep -color'
 alias fgrep='fgrep -color'
 

@@ -1,8 +1,8 @@
 @import url('file:///home/kim/.cache/wal/colors-waybar.css');
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "JetBrains Mono ", Roboto, Arial, sans-serif;
-    font-size: 12;
+    font-family: "JetBrainsMono Nerd Font", Roboto, Arial, sans-serif;
+    font-size: 12px;
     border: none;
     /*border-radius: 5;*/
     margin: 2px;
@@ -38,34 +38,35 @@ window#waybar.chromium {
 */
 
 button {
-    /* Use box-shadow instead of border so the text isn't offset */
+    /* Use box-shadow instead of border so the text isn't offset
     box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each button name */
+    Avoid rounded borders under each button name */
     border: none;
     border-radius: 0;
 }
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px @color4;
+    box-shadow: inset 0 -3px transparent;
     color: @color7;
 }
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
-    background-color: @color0;
-    color: #0099FF;
+    /*background-color: @color0;
+    color: #0099FF;*/
 }
 #workspaces button {
-    padding: 0 0px;
+    padding: 0 5px;
     background-color: transparent;
     color: #cccccc;
 }
 #workspaces button:hover {
-    background: rgba(40, 40, 40, 0.8);
+    background-color: @color1;
+    border-radius: 20px;
 }
 #workspaces button.focused {
     background-color: #64727D;
-    box-shadow: inset 0 -1px #ffffff;
+    /*box-shadow: inset 0 -1px #ffffff;*/
 }
 #workspaces button.urgent {
     background-color: #eb4d4b;
@@ -91,6 +92,8 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #custom-gpuinfo,
+#custom-gpuinfo2,
+#custom-weather,
 
 #mpd {
     padding: 0 10px;
@@ -110,10 +113,10 @@ button:hover {
 }
 #clock {
     background-color: @color1;
-    color: @color7;
+    color: @color15;
 /*    padding: 10 5px;*/
-    border: 5px @color0;
-    border-radius: 20;
+    border: 5px @color5;
+    border-radius: 20px;
 }
 #battery {
     background-color: @color7;
@@ -158,8 +161,10 @@ button:hover {
     background-color: #000000;
 }
 #cpu {
-    background-color: @color7;
-    color: @color0;
+    background-color: @color1;
+    color: @color15;
+    border: 1px @color0;
+    border-radius: 20px;
 }
 #memory {
     background-color: #9b59b6;
@@ -179,9 +184,9 @@ button:hover {
 #pulseaudio {
     background-color: @color1;
     /*font-weight: bold;*/
-    color: @color7;
+    color: @color15;
     border: 1px @color0;
-    border-radius: 20;
+    border-radius: 20px;
 }
 #pulseaudio.muted {
     background-color: transparent;
@@ -198,10 +203,26 @@ button:hover {
 #custom-gpuinfo {
     /*background:  transparent;*/
     background-color: @color1;
-    color: @color7;
+    color: @color15;
     /*font-weight: bold;*/
     border: 1px @color0;
-    border-radius: 20;
+    border-radius: 20px;
+}
+#custom-gpuinfo2 {
+    /*background:  transparent;*/
+    background-color: @color1;
+    color: @color15;
+    /*font-weight: bold;*/
+    border: 1px @color0;
+    border-radius: 20px;
+}
+#custom-weather {
+    /*background:  transparent;*/
+    background-color: @color1;
+    color: @color15;
+    /*font-weight: bold;*/
+    border: 1px @color0;
+    border-radius: 20px;
 }
 #custom-media {
     background-color: transparent;
@@ -217,13 +238,20 @@ button:hover {
 #temperature {
     /*background-color: #c0630b;*/
     background-color: @color1;
-    color: @color7;
+    color: @color15;
     /*font-weight: bold;*/
     border: 1px @color0;
-    border-radius: 20;
+    border-radius: 20px;
 }
 #temperature.critical {
     background-color: #eb4d4b;
+}
+#tray menu {
+    background-color: @background;
+    border-radius: 20px;
+    color: @foreground;
+    padding: 0 5px;
+
 }
 #tray {
     background-color: transparent;

@@ -1,0 +1,85 @@
+{
+    "pulseaudio": {
+        "scroll-step": 2.5, // %, can be a float
+        "format": "Vol: {volume}% {icon} ",
+    //    "format-bluetooth": "{volume}% {icon} {format_source}",
+    //    "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+    //    "format-source": "{volume}% ",
+    //    "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+            }
+    },
+
+     "hyprland/workspaces": {
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-sroll-down": "hyprctl dispatch workspace e-1",
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{name}{icon}",
+        "format": "{name}:{icon}",
+        "format-icons": {
+            "1": " ",
+            "2": " ",
+            "3": " ",
+            "4": " ",
+            "5": " ",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": " ",
+            "10": " ",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
+    "tray": {
+        "icon-size": 19,
+        "spacing": 10,
+        // "icons": {
+        //   "blueman": "bluetooth",
+        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+        // }
+    },
+    "clock": {
+        "timezone": "America/Central",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        //"format": "{:$r}",
+        "format": "{:%I:%M %p}",
+        "format-alt": "{:%Y-%m-%d}",
+        "calendar": {
+            "on-scroll": 1,
+            "format": {
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions":  {
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
+    },
+    "cpu": {
+        "format": "CPU: {usage}%  ",
+        "interval": 1,
+        "tooltip": true
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon0/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "CPU: {temperatureC}°C {icon}",
+        //"format-icons": ["", "", ""],
+        "format-icons": [""],
+        "tooltip": true
+    }
+}

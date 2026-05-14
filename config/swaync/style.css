@@ -1,4 +1,4 @@
-@import url('file:///home/kim/.cache/wal//colors-waybar.css');
+@import url('file:///home/kim/.cache/wal/colors-waybar.css');
 :root {
   --cc-bg: rgba(46, 46, 46, 0.7);
   --noti-border-color: rgba(225, 225, 255, 0.15);
@@ -70,6 +70,8 @@ notificationwindow, blankwindow, blankwindow {
 }
 
 .notification-row {
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 14px;
   background: none;
   outline: none;
 }
@@ -322,6 +324,8 @@ notificationwindow, blankwindow, blankwindow {
 
 .control-center {
   /* The Control Center which contains the old notifications + widgets */
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 14px;
   background: @color2;
   color: @foreground;
   border-radius: var(--border-radius);

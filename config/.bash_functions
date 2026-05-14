@@ -50,14 +50,20 @@ rw() {
 export -f rw
 
 # Update PyWal with new image to create colors
-# usage: pywal /path/to/image.png
-pywal() {
-  wal -i "$1"
+# usage: pwal /path/to/image.png
+mywal() {
+  wal -i "$1" --cols16
+. ~/.config/update_starship.sh # > /tmp/starship-palette.tmp
+    # Replace palette section in starship.toml
+    awk '/^[palettes.pywal]$/,/^color15 =/{next} // {print}' ~/.config/starship.toml > /tmp/starship.toml
+    cat /tmp/wal_palette.toml >> /tmp/starship.toml
+    mv /tmp/starship.toml ~/.config/starship.toml
 }
-export -f pywal
+export -f mywal
 
 # function to start yazi and stay in current directory after yazi exits
 y() {
+	cat ~/.cache/wal/sequences
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
   yazi "$@" --cwd-file="$tmp"
   IFS= read -r -d '' cwd <"$tmp"

@@ -1,14 +1,12 @@
 #!/bin/bash
 
 # Programs required for compilation and installation of 'yay'.
-sudo pacman -S base-devel git --needed
+sudo pacman -S base-devel git 
 
 # Change to the 'projects' directory and clone the git repo for 'yay'.
-cd ~/projects
-sudo git clone https://aur.archlinux.org/yay.git
-
-# Change ownership of directory to your username.
-sudo chown -R kim:kim ./yay
+[ !-d "$HOME/.repos" ] && mkdir -p $HOME/.repos
+cd $HOME/.repos
+git clone https://aur.archlinux.org/yay.git
 
 # Move to the directory and compile.
 cd yay

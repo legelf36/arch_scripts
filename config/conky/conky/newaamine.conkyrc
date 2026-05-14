@@ -1,0 +1,103 @@
+ conky.config = {
+-------------------------------------
+--  Generic Settings
+-------------------------------------
+out_to_x = false,
+out_to_wayland = true,
+background = true,
+update_interval = 0.1,
+cpu_avg_samples = 2,
+net_avg_samples = 2,
+temperature_unit = 'celsius',
+double_buffer = true,
+no_buffers = true,
+text_buffer_size = 2048,
+imlib_cache_size = 4194304,
+-------------------------------------
+--  Window Specifications
+-------------------------------------
+gap_x = -220,
+gap_y = 20,
+minimum_width = 280,
+minimum_height = 250,
+maximum_width = 300,
+alignment = 'top_left',
+
+own_window = true,
+own_window_class = 'conky',
+own_window_type = 'normal',
+--own_window_argb_visual = true,
+--own_window_transparent = true,
+own_window_hints = 'undecorated,sticky,skip_taskbar,skip_pager,below',
+--own_window_argb_value = 0,
+own_window_colour = '#00ffffff',
+border_width = 0,
+border_inner_margin = 0,
+border_outer_margin = 0,
+draw_shades = false,
+draw_outline = false,
+draw_borders = false,
+draw_graph_borders = false,
+-------------------------------------
+--  Text Settings
+-------------------------------------
+override_utf8_locale = true,
+use_xft = true,
+font = 'MesloLGMNerdFont',
+xftalpha = 1.0,
+uppercase = yes,
+-------------------------------------
+--  Color Scheme
+-------------------------------------
+default_color = 'DDDD88',
+color1 = 'FFFFFF', color2 = 'CCCCCC', color3 = '999999', color4 = '666666',
+color5 = '333333', color6 = '88AA44', color7 = 'AA3636', color8 = 'DDAA33',
+color9 = '0066AA',
+-------------------------------------
+--  Lua
+-------------------------------------
+--lua_load = '~/.config/conky/lua/newaamine.lua',
+--lua_draw_hook_post = 'main',lua_draw_hook_pre = 'background',
+}
+
+conky.text = [[
+${goto 20}${voffset 135}${font :size=9}${color1}Vim Keys${goto 150}Hyprland Keys
+${goto 20}${font :size=7}${color2}/ = find${goto 70}u = undo${goto 150}Sup + q  = quit window
+${goto 20}${font :size=7}${color2}y = copy${goto 70}p = paste${goto 150}Sup + e  = logout
+${goto 20}${font :size=7}${color2}o = new line below cur${goto 150}Sup + v  = float toggle
+${goto 20}${font :size=7}${color2}Ctl+w, s = split win horz${goto 150}Sup + b  = Brave browser
+${goto 20}${font :size=7}${color2}Ctl+w, v = split win vert${goto 150}Sup + Return  = terminal
+${goto 20}${voffset 5}${font :size=9}${color1}Yazi Keys
+${goto 20}${voffset 0}${font :size=7}${color2}. = show hidden
+${goto 20}${voffset 0}${font :size=7}${color2}, m = sort by mod time
+${goto 20}${voffset 0}${font :size=7}${color2}, a = sort by alphabet
+${goto 20}${voffset 0}${font :size=7}${color2}[ = previous tab
+${goto 20}${voffset 0}${font :size=7}${color2}] = next tab
+${goto 20}${voffset 0}${font :size=7}${color2}/ = find next filei
+${goto 20}${voffset 0}${font :size=7}${color2}? = find previous file 
+${goto 20}${voffset 0}${font :size=7}${color2}n = found next
+${goto 20}${voffset 0}${font :size=7}${color2}N = found prevoius
+${goto 20}${voffset 0}${font :size=7}${color2}d = trash file
+${goto 20}${voffset 0}${font :size=7}${color2}D = perm. delete
+${goto 20}${voffset 0}${font :size=7}${color2}x = cut
+${goto 20}${voffset 0}${font :size=7}${color2}v = paste
+${goto 20}${voffset 0}${font :size=7}${color2}a = create file/folder
+${goto 20}${voffset 0}${font :size=7}${color2}r = rename file 
+${goto 20}${voffset 0}${font :size=7}${color2}Z = zoxide plugin
+${goto 20}${voffset 0}${font :size=7}${color2}S = search content (ripgrep)
+${goto 20}${voffset 5}${font :size=9}${color1}Bash Keys
+${goto 20}${voffset 0}${font :size=7}${color2}la = list all files
+${goto 20}${voffset 0}${font :size=7}${color2}ll = long list files
+${goto 20}${voffset 0}${font :size=7}${color2}lla = long list all files
+${goto 20}${voffset 0}${font :size=7}${color2}yu = system update
+${goto 20}${voffset 0}${font :size=7}${color2}yyu = unattended update
+${goto 20}${voffset 0}${font :size=7}${color2}kc = kill conkys'
+${goto 20}${voffset 0}${font :size=7}${color2}nb = edit .bashrc
+${goto 20}${voffset 0}${font :size=7}${color2}nba = edit .bash_aliases
+${goto 20}${voffset 0}${font :size=7}${color2}nbf = edit .bash_functions
+${goto 20}${voffset 0}${font :size=7}${color2}copydots = backup config & home
+${goto 20}${voffset 0}${font :size=7}${color2}sshin 123 = ssh login
+${goto 20}${voffset 0}${font :size=7}${color2}y = yazi
+
+]]
+;

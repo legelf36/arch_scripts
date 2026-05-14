@@ -2,38 +2,50 @@
 {
     "layer": "bottom", // "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 24, // Waybar height (to be removed for auto height)
+    "height": 35, // Waybar height (to be removed for auto height)
     "margin-top": 13,
+    "margin-bottom": 13,
     "width": 1100, // "width": 1280, // Waybar width
     "spacing": 14, // Gaps between modules (4px)
     // Choose the order of the modules
     "output": "DP-3",
     "include": [ "~/.config/waybar/default-modules.json", ],
-    "modules-left": [  "temperature", "custom/gpuinfo", "hyprland/submap" ],
+    "include": [ "~/.config/waybar/common-modules.json", ],
+    "modules-left": [  "temperature", "cpu", "custom/gpuinfo", "custom/gpuinfo2", "hyprland/submap" ],
     "modules-center": [ "hyprland/workspaces" ],
-    "modules-right": [ "pulseaudio", "tray" ,"clock" ],
+    "modules-right": [ "pulseaudio", "tray" ,"clock", "custom/weather" ],
     // Modules configuration
 
   "custom/gpuinfo": {
     "format": "GPU: {}°C ",
     "exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits",
-    "format-alt": "GPU: {}% ",
-    "exec-alt": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
     "interval": 1,
-//    "format-icons": ["󰝦", "󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥"],
     "tooltip": true
   },
-
-    "custom/power": {
-        "format" : "⏻ ",
-		"tooltip": false,
-		/*"menu": "on-click",*/
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
-    }
+  "custom/gpuinfo2": {
+    "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
+    "format": "GPU: {}%  ",
+    "interval": 1,
+    "tooltip": true
+  },
+  "custom/weather": {
+    "format": "{}",
+    "tooltip": true,
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/weather/get_weather.rb",
+    "on-click": "~/.config/waybar/scripts/weather/get_weather.rb --next", // Cycle views
+    "interval": 900 // Every 15 minutes
+  },
+  "custom/power": {
+    "format" : "⏻ ",
+    "tooltip": false,
+    /*"menu": "on-click",*/
+    "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+    "menu-actions": {
+        "shutdown": "shutdown",
+        "reboot": "reboot",
+        "suspend": "systemctl suspend",
+        "hibernate": "systemctl hibernate"
+        }
+  },
 }
