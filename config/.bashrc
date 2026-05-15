@@ -8,6 +8,7 @@
 cat ~/.cache/wal/sequences
 # source ~/.cache/wal/colors.sh
 ###EXPORT###
+export LANG='en_US.UTF-8'
 export EDITOR='nvim'
 export VISUAL='nvim'
 export HISTCONTROL=ignoreboth:erasedups
