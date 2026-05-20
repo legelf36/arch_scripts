@@ -22,6 +22,8 @@ alias wget="wget -c"
 alias kc='killall conky'
 alias hw="hwinfo --short"
 
+alias nv="nvim"
+alias snv="sudo nvim"
 alias nfstab="sudo \$EDITOR /etc/fstab"
 alias nb="\$EDITOR ~/.bashrc"
 alias nba="\$EDITOR ~/.bash_aliases"

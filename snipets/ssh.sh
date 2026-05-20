@@ -11,8 +11,16 @@ sudo systemctl enable sshd
 # Check for ssh
 which ssh
 
+# ssh to user "kim" on laptop at "192.168.0.102" for first time
+ssh kim@192.168.0.107
+
+# Copy key to ssh user "kim" on laptop at "192.168.0.102"
+ssh-copy-id kim@192.168.0.107
+
 # retrieve IP address for this machine
 ip addr show
+# or
+ifconfig
 
 # Login to remote
 # ssh <user>@<ip_address>
@@ -25,4 +33,7 @@ ssh-keygen -b 4096
 
 # Copy key to remote server
 # ssh-copy-id <remote_user>@<remote_ip>
+
+# Generate keys for ssh
+ssh-keygen -t rsa
 

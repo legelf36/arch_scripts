@@ -141,14 +141,14 @@
       "type": "os",
       "keyIcon": ""
     },
-    {
+    /*{
       "type": "host",
       "keyIcon": "󰌢"
-    },
-    "bios",
-    "bootmgr",
+    },*/
+    // "bios",
+    // "bootmgr",
     "board",
-    "chassis",
+    //"chassis",
     {
       "type": "kernel",
       "keyIcon": ""

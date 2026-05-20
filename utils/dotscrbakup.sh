@@ -34,7 +34,7 @@
 [ -d "$HOME/.config/qt5ct" ] && cp -rfv $HOME/.config/qt5ct/ $HOME/.scripts/config/
 
 pushd $HOME/.scripts # Push to the stack and move to the 'scripts' directory.
-current_date=$(date +%Y-%m-%d)
+current_date=$(date +%Y-%m-%d-%h:%m)
 git add -A                                               # Add any changes to 'master' branch.
 git commit -m "scripted update to scripts $current_date" # Commit changes to the 'master' branch.
 git push -u                                              # Push the changes to the github repository.

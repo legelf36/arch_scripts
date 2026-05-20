@@ -30,7 +30,7 @@ export -f ex
 # function to copy configuration files to scripts directory
 # usage: copydots
 copydots() {
-  /home/kim/.scripts/dotscrbakup.sh
+  /home/kim/.scripts/utils/dotscrbakup.sh
 }
 export -f copydots
 
@@ -63,7 +63,7 @@ export -f mywal
 
 # function to start yazi and stay in current directory after yazi exits
 y() {
-	cat ~/.cache/wal/sequences
+	cat ~/.cache/wal/sequences # Pywal colors
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
   yazi "$@" --cwd-file="$tmp"
   IFS= read -r -d '' cwd <"$tmp"
