@@ -20,12 +20,15 @@ return {
 			"vim",
 			"yaml",
 		},
-		highlight = { enable = true },
+		highlight = {
+			enable = true,
+			use_language = true,
+		},
 		indent = { enable = true },
 	},
 	config = function()
 		-- Directory to install parsers and queries to (prepended to `runtimepath` to have priority)
-		-- install_dir = vim.fn.stdpath('data') .. '/site',
+		install_dir = vim.fn.stdpath("data") .. "/site"
 		vim.api.nvim_create_autocmd("FileType", {
 			pattern = { "<FileType>" },
 			callback = function(args)

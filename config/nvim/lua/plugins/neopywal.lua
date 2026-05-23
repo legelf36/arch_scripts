@@ -1,4 +1,4 @@
-return {
+return{
 	"RedsXDD/neopywal.nvim",
 	name = "neopywal",
 	lazy = false,

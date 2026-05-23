@@ -4388,7 +4388,7 @@ one-instance=1
 #one-instance-when-started-from-file=1
 
 # Enqueue items into playlist in one instance mode (boolean)
-#playlist-enqueue=0
+playlist-enqueue=1
 
 # Expose media player via D-Bus (boolean)
 #dbus=0

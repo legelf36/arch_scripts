@@ -209,18 +209,18 @@
       "type": "font",
       "keyIcon": ""
     },
-    {
+    /*{
       "type": "cursor",
       "keyIcon": "󰆿"
-    },
+    },*/
     {
       "type": "terminal",
       "keyIcon": ""
     },
-    {
+    /*{
       "type": "terminalfont",
       "keyIcon": ""
-    },
+    },*/
     {
       "type": "cpu",
       "keyIcon": "",
@@ -304,17 +304,17 @@
       "keyIcon": ""
     },
     "dns",
-    "datetime",
+    //"datetime",
     "vulkan",
     "opengl",
     "users",
     "sound",
     "netio",
-    "diskio",
-    {
+    //"diskio",
+    /*{
       "type": "physicaldisk",
       "temp": true
-    },
+    },*/
     "break",
     {
       "type": "colors",

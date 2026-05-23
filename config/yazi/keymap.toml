@@ -4,6 +4,10 @@
 
 [mgr]
 
+prepend_keymap = [
+  { on = ["M","s"], run = "plugin sshfs -- menu",            desc = "Open SSHFS options" },
+]
+
 keymap = [
 	{ on = "<Esc>", run = "escape",             desc = "Exit visual mode, clear selection, or cancel search" },
 	{ on = "<C-[>", run = "escape",             desc = "Exit visual mode, clear selection, or cancel search" },

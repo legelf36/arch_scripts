@@ -12,7 +12,17 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 		os.exit(1)
 	end
 end
+
 vim.opt.rtp:prepend(lazypath)
 
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "<filetype>" },
+	callback = function()
+		vim.treesitter.start()
+	end,
+})
+
+--require("vim._core.ui2").enable({})
 require("vim-options")
+require("keymaps")
 require("lazy").setup("plugins") -- Call the plugins in the ./lua/plugins directory.

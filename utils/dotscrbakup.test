@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Check for "/.scripts" directory in "$HOME" 
+[ -d "$HOME/.scripts" ]
+
