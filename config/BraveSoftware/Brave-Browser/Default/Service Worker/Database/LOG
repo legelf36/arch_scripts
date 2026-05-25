@@ -1,4 +1,0 @@
-2026/05/24-13:13:25.685 a9b Reusing MANIFEST /home/kim/.config/BraveSoftware/Brave-Browser/Default/Service Worker/Database/MANIFEST-000001
-2026/05/24-13:13:25.701 a9b Recovering log #3
-2026/05/24-13:13:25.731 a9b (ignoring error) /home/kim/.config/BraveSoftware/Brave-Browser/Default/Service Worker/Database/000003.log: dropping 268 bytes; Corruption: missing start of fragmented record(2)
-2026/05/24-13:13:25.731 a9b Reusing old log /home/kim/.config/BraveSoftware/Brave-Browser/Default/Service Worker/Database/000003.log 

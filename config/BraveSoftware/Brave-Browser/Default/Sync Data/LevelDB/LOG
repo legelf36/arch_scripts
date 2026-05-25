@@ -1,9 +1,0 @@
-2026/05/24-13:13:25.666 a98 Reusing MANIFEST /home/kim/.config/BraveSoftware/Brave-Browser/Default/Sync Data/LevelDB/MANIFEST-000001
-2026/05/24-13:13:25.701 a98 Recovering log #166
-2026/05/24-13:13:25.726 a98 Reusing old log /home/kim/.config/BraveSoftware/Brave-Browser/Default/Sync Data/LevelDB/000166.log 
-2026/05/24-15:25:32.566 a98 Level-0 table #170: started
-2026/05/24-15:25:32.573 a98 Level-0 table #170: 50449 bytes OK
-2026/05/24-15:25:32.579 a98 Delete type=0 #166
-2026/05/24-18:35:53.453 a99 Level-0 table #172: started
-2026/05/24-18:35:53.461 a99 Level-0 table #172: 50800 bytes OK
-2026/05/24-18:35:53.466 a99 Delete type=0 #169

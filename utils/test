@@ -12,10 +12,10 @@ while IFS=', ' read -r filename; do
   # Check if file exists using -e test
   if [ -e "$HOME/$filename" ]; then
     #echo "File '$filename' exists"
-    cp -rfv $HOMECFG/$filename $COPYLOC/
+    cp -rf $HOMECFG/$filename $COPYLOC/
   elif [ -e "$HOMECFG/$filename" ]; then
     #echo "File '$filename' exists"
-    cp -rfv $HOMECFG/$filename $COPYLOC/
+    cp -rf $HOMECFG/$filename $COPYLOC/
   else
     echo "File '$filename' does not exist"
   fi
@@ -29,6 +29,7 @@ git commit -m "scripted update to scripts $current_date" # Commit changes to the
 git push -u                                              # Push the changes to the github repository.
 popd                                                     # Go to previous directory and remove '.scripts' from the stack
 
+# Check for backup drive
 [ ! -d "$HOME/wd2tb/" ] && echo "Backup drive not mounted. No Backup!" && exit
 
 # Backup specified directories with rsync
