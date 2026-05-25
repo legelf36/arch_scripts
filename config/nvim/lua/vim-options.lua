@@ -20,7 +20,7 @@ vim.opt.laststatus = 0 -- hide unified statusline
 --vim.opt.guicursor = "" -- use terminal cursor
 
 vim.opt.signcolumn = "yes" -- always show a sign column
-vim.opt.colorcolumn = "100" -- show a column at 100 char position
+--vim.opt.colorcolumn = "100" -- show a column at 100 char position
 vim.opt.termguicolors = true -- enable 24-bit color
 vim.opt.cmdheight = 1 -- hide command line interface (0) when not active
 vim.opt.showmatch = true -- highlight matching brackets

@@ -1,0 +1,39 @@
+2026/05/23-18:43:37.495 585 Reusing MANIFEST /home/kim/.config/BraveSoftware/Brave-Browser/Default/Sync Data/LevelDB/MANIFEST-000001
+2026/05/23-18:43:37.545 585 Recovering log #151
+2026/05/23-18:43:37.569 585 Reusing old log /home/kim/.config/BraveSoftware/Brave-Browser/Default/Sync Data/LevelDB/000151.log 
+2026/05/23-19:59:00.172 579 Level-0 table #155: started
+2026/05/23-19:59:00.181 579 Level-0 table #155: 49971 bytes OK
+2026/05/23-19:59:00.186 579 Delete type=0 #151
+2026/05/23-19:59:00.187 579 Compacting 4@0 + 1@1 files
+2026/05/23-19:59:00.196 579 Generated table #156@0: 10 keys, 1897 bytes
+2026/05/23-19:59:00.196 579 Compacted 4@0 + 1@1 files => 1897 bytes
+2026/05/23-19:59:00.199 579 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/05/23-19:59:00.199 579 Delete type=2 #152
+2026/05/23-19:59:00.199 579 Delete type=2 #155
+2026/05/23-19:59:00.200 579 Delete type=2 #145
+2026/05/23-19:59:00.200 579 Delete type=2 #147
+2026/05/23-19:59:00.200 579 Delete type=2 #149
+2026/05/23-23:09:45.621 586 Level-0 table #158: started
+2026/05/23-23:09:45.628 586 Level-0 table #158: 49984 bytes OK
+2026/05/23-23:09:45.633 586 Delete type=0 #154
+2026/05/24-02:20:24.164 586 Level-0 table #160: started
+2026/05/24-02:20:24.173 586 Level-0 table #160: 49983 bytes OK
+2026/05/24-02:20:24.179 586 Delete type=0 #157
+2026/05/24-05:31:07.577 586 Level-0 table #162: started
+2026/05/24-05:31:07.585 586 Level-0 table #162: 49912 bytes OK
+2026/05/24-05:31:07.591 586 Delete type=0 #159
+2026/05/24-08:42:00.217 585 Level-0 table #164: started
+2026/05/24-08:42:00.223 585 Level-0 table #164: 49919 bytes OK
+2026/05/24-08:42:00.228 585 Delete type=0 #161
+2026/05/24-08:42:00.229 585 Compacting 4@0 + 1@1 files
+2026/05/24-08:42:00.237 585 Generated table #165@0: 10 keys, 1900 bytes
+2026/05/24-08:42:00.237 585 Compacted 4@0 + 1@1 files => 1900 bytes
+2026/05/24-08:42:00.240 585 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/05/24-08:42:00.240 585 Delete type=2 #156
+2026/05/24-08:42:00.240 585 Delete type=2 #160
+2026/05/24-08:42:00.241 585 Delete type=2 #164
+2026/05/24-08:42:00.241 585 Delete type=2 #158
+2026/05/24-08:42:00.241 585 Delete type=2 #162
+2026/05/24-11:52:54.361 585 Level-0 table #167: started
+2026/05/24-11:52:54.370 585 Level-0 table #167: 49966 bytes OK
+2026/05/24-11:52:54.375 585 Delete type=0 #163

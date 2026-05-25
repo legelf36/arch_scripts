@@ -1,0 +1,42 @@
+2026/05/23-18:43:37.536 5 Reusing MANIFEST /home/kim/.config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/MANIFEST-000001
+2026/05/23-18:43:37.541 5 Recovering log #515
+2026/05/23-18:43:37.544 5 Reusing old log /home/kim/.config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/000515.log 
+2026/05/23-19:35:39.290 7 Level-0 table #519: started
+2026/05/23-19:35:39.296 7 Level-0 table #519: 17048 bytes OK
+2026/05/23-19:35:39.301 7 Delete type=0 #515
+2026/05/23-19:35:39.302 7 Compacting 4@0 + 1@1 files
+2026/05/23-19:35:39.359 7 Generated table #520@0: 302 keys, 1636060 bytes
+2026/05/23-19:35:39.360 7 Compacted 4@0 + 1@1 files => 1636060 bytes
+2026/05/23-19:35:39.363 7 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/05/23-19:35:39.365 7 Delete type=2 #510
+2026/05/23-19:35:39.365 7 Delete type=2 #519
+2026/05/23-19:35:39.365 7 Delete type=2 #516
+2026/05/23-19:35:39.365 7 Delete type=2 #512
+2026/05/23-19:35:39.365 7 Delete type=2 #514
+2026/05/23-22:24:43.896 7 Level-0 table #522: started
+2026/05/23-22:24:43.902 7 Level-0 table #522: 22807 bytes OK
+2026/05/23-22:24:43.908 7 Delete type=0 #518
+2026/05/24-06:41:19.120 7 Level-0 table #524: started
+2026/05/24-06:41:19.124 7 Level-0 table #524: 14024 bytes OK
+2026/05/24-06:41:19.127 7 Delete type=0 #521
+2026/05/24-07:07:19.898 5 Level-0 table #526: started
+2026/05/24-07:07:19.903 5 Level-0 table #526: 14521 bytes OK
+2026/05/24-07:07:19.910 5 Delete type=0 #523
+2026/05/24-07:47:20.407 7 Level-0 table #528: started
+2026/05/24-07:47:20.413 7 Level-0 table #528: 14612 bytes OK
+2026/05/24-07:47:20.418 7 Delete type=0 #525
+2026/05/24-07:47:20.419 7 Compacting 4@0 + 1@1 files
+2026/05/24-07:47:20.475 7 Generated table #529@0: 305 keys, 1633636 bytes
+2026/05/24-07:47:20.475 7 Compacted 4@0 + 1@1 files => 1633636 bytes
+2026/05/24-07:47:20.480 7 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/05/24-07:47:20.481 7 Delete type=2 #524
+2026/05/24-07:47:20.481 7 Delete type=2 #528
+2026/05/24-07:47:20.481 7 Delete type=2 #526
+2026/05/24-07:47:20.482 7 Delete type=2 #520
+2026/05/24-07:47:20.482 7 Delete type=2 #522
+2026/05/24-08:14:53.687 7 Level-0 table #531: started
+2026/05/24-08:14:53.694 7 Level-0 table #531: 14251 bytes OK
+2026/05/24-08:14:53.698 7 Delete type=0 #527
+2026/05/24-11:39:22.462 7 Level-0 table #533: started
+2026/05/24-11:39:22.468 7 Level-0 table #533: 14270 bytes OK
+2026/05/24-11:39:22.473 7 Delete type=0 #530

@@ -1,0 +1,53 @@
+conky.config = {
+
+background = true,
+update_interval = 0.2,
+
+cpu_avg_samples = 2,
+net_avg_samples = 2,
+temperature_unit = 'celsius',
+
+double_buffer = true,
+no_buffers = true,
+text_buffer_size = 2048,
+
+gap_x = -700,
+gap_y = 50,
+minimum_width = 300, minimum_height = 450,
+maximum_width = 300,
+own_window = true,
+--## me change, added next 2 lines
+--## own_window_type override
+own_window_type = 'normal', 			-- if own_window true options are: normal/override/dock/desktop/panel
+own_window_argb_visual = true,
+own_window_transparent = true,
+own_window_hints = 'undecorated,sticky,skip_taskbar,skip_pager,below',
+own_window_argb_value = 0,
+own_window_colour = '000000',
+border_inner_margin = 0,
+border_outer_margin = 0,
+alignment = 'top_left',
+
+draw_shades = false,
+draw_outline = false,
+draw_borders = false,
+draw_graph_borders = false,
+
+override_utf8_locale = true,
+use_xft = true,
+font = 'Open Sanslight:size=8',
+xftalpha = 1.0,
+uppercase = yes,
+
+default_color = '3050A0',
+color1 = 'FFFFFF',
+color2 = 'CCCCCC',
+color3 = '999999',
+color4 = '666666',
+color5 = '333333',
+
+lua_load = '~/.config/conky/lua/temp_boxes.lua',
+lua_draw_hook_post = 'main'};
+
+conky.text = [[]];
+
