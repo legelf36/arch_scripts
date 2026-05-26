@@ -35,6 +35,7 @@ popd                                                     # Go to previous direct
 # Backup specified directories with rsync
 # rsync_options="-aEP --mkpath"
 
+
 # $(which rsync) $rsync_options $HOME/.scripts $HOME/wd2tb/Backups/
 # $(which rsync) $rsync_options $HOME/.config $HOME/wd2tb/Backups/
 # $(which rsync) $rsync_options $HOME/.repos $HOME/wd2tb/Backups/
