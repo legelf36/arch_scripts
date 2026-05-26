@@ -27,10 +27,17 @@ ex() {
 }
 export -f ex
 
+# function to update "~/.scripts" directory to git hub
+# usage: ug
+ug() {
+  . $HOME/.scripts/utils/scr-git-update.sh
+}
+export -f ug
+
 # function to copy configuration files to scripts directory
 # usage: copydots
 copydots() {
-  /home/kim/.scripts/utils/dotscrbakup.sh
+  . $HOME/.scripts/utils/dotscrbak.sh
 }
 export -f copydots
 
@@ -62,6 +69,7 @@ mywal() {
 export -f mywal
 
 # function to start yazi and stay in current directory after yazi exits
+# usage: y
 y() {
 	cat ~/.cache/wal/sequences # Pywal colors
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
