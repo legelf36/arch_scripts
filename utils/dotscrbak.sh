@@ -33,13 +33,13 @@ done < $HOME/.scripts/utils/backup-list.csv
 # [ ! -d "$HOME/wd2tb/" ] && echo "Backup drive not mounted. No Backup!" && exit
 
 # Backup specified directories with rsync
-# rsync_options="-aEP --mkpath"
+rsync_options="-aEP --mkpath"
 
-# $(which rsync) $rsync_options $HOME/.scripts $HOME/wd2tb/Backups/
-# $(which rsync) $rsync_options $HOME/.config $HOME/wd2tb/Backups/
-# $(which rsync) $rsync_options $HOME/.repos $HOME/wd2tb/Backups/
-# $(which rsync) $rsync_options $HOME/Documents $HOME/wd2tb/Backups/
-# $(which rsync) $rsync_options $HOME/Downloads $HOME/wd2tb/Backups/
-# $(which rsync) $rsync_options $HOME/Pictures $HOME/wd2tb/Backups/
-# $(which rsync) $rsync_options $HOME/Videos $HOME/wd2tb/Backups/
+$(which rsync) $rsync_options $HOME/.scripts $HOME/wd2tb/Backups/
+$(which rsync) $rsync_options $HOME/.config $HOME/wd2tb/Backups/
+$(which rsync) $rsync_options $HOME/.repos $HOME/wd2tb/Backups/
+$(which rsync) $rsync_options $HOME/Documents $HOME/wd2tb/Backups/
+$(which rsync) $rsync_options $HOME/Downloads $HOME/wd2tb/Backups/
+$(which rsync) $rsync_options $HOME/Pictures $HOME/wd2tb/Backups/
+$(which rsync) $rsync_options $HOME/Videos $HOME/wd2tb/Backups/
 # $(which rsync) $rsync_options $HOME/Cad $HOME/wd2tb/Backups/
