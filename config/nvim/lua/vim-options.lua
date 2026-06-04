@@ -7,7 +7,7 @@ vim.g.netrw_banner = 0 -- disables netrw banner
 vim.opt.number = true -- Line number
 vim.opt.relativenumber = true -- Relative line numbers
 vim.opt.wrap = false -- do not wrap lines by default
-vim.opt.scrolloff = 10 -- Keep 10 lines above and below the cursor
+vim.opt.scrolloff = 20 -- Keep 20 lines above and below the cursor
 
 vim.opt.smartindent = true -- smart auto-indent
 vim.opt.inccommand = "split" -- Preview window for substitution commands

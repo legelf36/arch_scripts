@@ -32,7 +32,7 @@ return {
 					settings = {
 						Lua = {
 							runtime = { version = "LuaJIT" },
-							diagnostics = { globals = { "vim" } },
+							diagnostics = { globals = { "hl", "vim" } },
 							telemetry = { enable = false },
 						},
 					},

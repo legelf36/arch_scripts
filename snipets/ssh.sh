@@ -22,17 +22,11 @@ ip addr show
 # or
 ifconfig
 
-# Login to remote
-# ssh <user>@<ip_address>
-
 # Check for existing key in default directory
 ls -l ~/.ssh
 
 # Generate key ( 4k bit size )
 ssh-keygen -b 4096
-
-# Copy key to remote server
-# ssh-copy-id <remote_user>@<remote_ip>
 
 # Generate keys for ssh
 ssh-keygen -t rsa

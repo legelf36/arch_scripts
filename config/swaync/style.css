@@ -86,12 +86,12 @@ notificationwindow, blankwindow, blankwindow {
 
 .notification-row .notification-background .notification {
   /* The actual notification */
-  border-radius: var(--border-radius);
-  border: 2px solid @color6;
+  border-radius: 12px 12px 12px 12px;
+  border: 2px solid @color0;
   padding: 5px 10px;
-  margin-bottom: 100px;:
+  margin-bottom: 35px;
   transition: var(--hover-tranistion);
-  background: @color2;
+  background: @color1;
   color: @color0;
 }
 
@@ -121,7 +121,7 @@ notificationwindow, blankwindow, blankwindow {
 
 .notification-row .notification-background .notification .notification-default-action:hover {
   -gtk-icon-filter: none;
-  background: @color3;
+  background: transparent;
 }
 
 .notification-row .notification-background .notification .notification-default-action:not(:only-child) {
@@ -326,7 +326,7 @@ notificationwindow, blankwindow, blankwindow {
   /* The Control Center which contains the old notifications + widgets */
   font-family: "JetBrainsMono Nerd Font";
   font-size: 14px;
-  background: @color2;
+  background: @color1;
   color: @foreground;
   border-radius: var(--border-radius);
 }
@@ -342,7 +342,7 @@ notificationwindow, blankwindow, blankwindow {
 }
 
 .control-center .control-center-list .notification {
-  box-shadow: @color1;
+  /*box-shadow: @color1;*/
 }
 
 .control-center .control-center-list .notification .notification-default-action,
@@ -352,7 +352,7 @@ notificationwindow, blankwindow, blankwindow {
 
 .control-center .control-center-list .notification .notification-default-action:hover,
 .control-center .control-center-list .notification .notification-action:hover {
-  background-color: @color1;
+  background-color: @cc-bg;
 }
 
 .blank-window {

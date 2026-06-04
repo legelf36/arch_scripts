@@ -37,7 +37,7 @@ export -f ug
 # function to copy configuration files to scripts directory
 # usage: copydots
 copydots() {
-  . $HOME/.scripts/utils/dotscrbak.sh
+  . $HOME/.scripts/backup/dotscrbak.sh
 }
 export -f copydots
 

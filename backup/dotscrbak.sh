@@ -1,10 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Check for "/.scripts" directory in "$HOME" 
 # [ ! -d "$HOME/.scripts/config" ] && mkdir -p $HOME/.scripts/config && echo "Directory .scripts/config created"
 
 HOMECFG="$HOME/.config"
 COPYLOC="$HOME/.scripts/config"
+BACKLOC="$HOME/wd2tb/Backups/"
 
 while IFS=', ' read -r filename; do
   # Remove carriage return if present
@@ -19,7 +20,7 @@ while IFS=', ' read -r filename; do
   else
     echo "File '$filename' does not exist"
   fi
-done < $HOME/.scripts/utils/backup-list.csv
+done < $HOME/.scripts/backup/backup-list.csv
 
 # Update "arch_scripts" on Github
 # pushd $HOME/.scripts # Push to the stack and move to the 'scripts' directory.
@@ -35,11 +36,11 @@ done < $HOME/.scripts/utils/backup-list.csv
 # Backup specified directories with rsync
 rsync_options="-aEP --mkpath"
 
-$(which rsync) $rsync_options $HOME/.scripts $HOME/wd2tb/Backups/
-$(which rsync) $rsync_options $HOME/.config $HOME/wd2tb/Backups/
-$(which rsync) $rsync_options $HOME/.repos $HOME/wd2tb/Backups/
-$(which rsync) $rsync_options $HOME/Documents $HOME/wd2tb/Backups/
-$(which rsync) $rsync_options $HOME/Downloads $HOME/wd2tb/Backups/
-$(which rsync) $rsync_options $HOME/Pictures $HOME/wd2tb/Backups/
-$(which rsync) $rsync_options $HOME/Videos $HOME/wd2tb/Backups/
-# $(which rsync) $rsync_options $HOME/Cad $HOME/wd2tb/Backups/
+$(which rsync) $rsync_options $HOME/.scripts $BACKLOC
+$(which rsync) $rsync_options $HOME/.config $BACKLOC
+$(which rsync) $rsync_options $HOME/.repos $BACKLOC
+$(which rsync) $rsync_options $HOME/Documents $BACKLOC
+$(which rsync) $rsync_options $HOME/Downloads $BACKLOC
+$(which rsync) $rsync_options $HOME/Pictures $BACKLOC
+$(which rsync) $rsync_options $HOME/Videos $BACKLOC
+# $(which rsync) $rsync_options $HOME/Cad $BACKLOC
