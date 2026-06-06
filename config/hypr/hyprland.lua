@@ -22,3 +22,5 @@ require("layouts")
 require("windowrules")
 -- WORKSPACES
 require("workspaces")
+-- GESTURES
+require("gestures")

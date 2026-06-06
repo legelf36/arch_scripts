@@ -9,11 +9,11 @@
     "spacing": 14, // Gaps between modules (4px)
     // Choose the order of the modules
     "output": "DP-3",
-    "include": [ "~/.config/waybar/default-modules.json", ],
-    "include": [ "~/.config/waybar/common-modules.json", ],
+    "include": [ "~/.config/waybar/default-modules.json" ],
+    "include": [ "~/.config/waybar/common-modules.json" ],
     "modules-left": [  "temperature", "cpu", "custom/gpuinfo", "custom/gpuinfo2", "hyprland/submap" ],
     "modules-center": [ "hyprland/workspaces" ],
-    "modules-right": [ "pulseaudio", "tray" ,"clock", "custom/weather" ],
+    "modules-right": [ "pulseaudio", "tray", "clock", "custom/weather" ],
     // Modules configuration
 
   "custom/gpuinfo": {
@@ -47,5 +47,5 @@
         "suspend": "systemctl suspend",
         "hibernate": "systemctl hibernate"
         }
-  },
+  }
 }

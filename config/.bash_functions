@@ -60,11 +60,11 @@ export -f rw
 # usage: pwal /path/to/image.png
 mywal() {
   wal -i "$1" --cols16
-. ~/.config/update_starship.sh # > /tmp/starship-palette.tmp
+#. ~/.config/update_starship.sh # > /tmp/starship-palette.tmp
     # Replace palette section in starship.toml
-    awk '/^[palettes.pywal]$/,/^color15 =/{next} // {print}' ~/.config/starship.toml > /tmp/starship.toml
-    cat /tmp/wal_palette.toml >> /tmp/starship.toml
-    mv /tmp/starship.toml ~/.config/starship.toml
+#    awk '/^[palettes.pywal]$/,/^color15 =/{next} // {print}' ~/.config/starship.toml > /tmp/starship.toml
+#    cat /tmp/wal_palette.toml >> /tmp/starship.toml
+#    mv /tmp/starship.toml ~/.config/starship.toml
 }
 export -f mywal
 
