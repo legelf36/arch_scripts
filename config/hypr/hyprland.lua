@@ -2,14 +2,14 @@
 require("monitors")
 -- INPUT
 require("input")
+-- GENERAL
+require("general")
 -- COLOR
 --require("colors")
 -- AUTOSTART
 require("autostart")
 -- ENVIRONMENT
 require("environment")
--- GENERAL
-require("general")
 -- DECORATIONS
 require("decoration")
 -- ANIMATIONS

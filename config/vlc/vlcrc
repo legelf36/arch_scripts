@@ -1,5 +1,5 @@
 ﻿###
-###  vlc 3.0.22
+###  vlc 3.0.23
 ###
 
 ###
@@ -736,68 +736,6 @@ qt-privacy-ask=0
 
 # Subtitle justification (integer)
 #ttml-align=0
-
-[qsv] # Intel QuickSync Video encoder for MPEG4-Part10/MPEG2 (aka H.264/H.262)
-
-# Enable software mode (boolean)
-#sout-qsv-software=0
-
-# Codec Profile (string)
-#sout-qsv-h264-profile=unspecified
-
-# Codec Level (string)
-#sout-qsv-h264-level=unspecified
-
-# Codec Profile (string)
-#sout-qsv-mpeg2-profile=unspecified
-
-# Codec Level (string)
-#sout-qsv-mpeg2-level=unspecified
-
-# Group of Picture size (integer)
-#sout-qsv-gop-size=32
-
-# Group of Picture Reference Distance (integer)
-#sout-qsv-gop-refdist=4
-
-# IDR interval (integer)
-#sout-qsv-idr-interval=0
-
-# Target Usage (string)
-#sout-qsv-target-usage=quality
-
-# Rate Control Method (string)
-#sout-qsv-rc-method=vbr
-
-# Quantization parameter (integer)
-#sout-qsv-qp=0
-
-# Quantization parameter for I-frames (integer)
-#sout-qsv-qpi=0
-
-# Quantization parameter for P-frames (integer)
-#sout-qsv-qpp=0
-
-# Quantization parameter for B-frames (integer)
-#sout-qsv-qpb=0
-
-# Maximum Bitrate (integer)
-#sout-qsv-bitrate-max=0
-
-# Accuracy of RateControl (integer)
-#sout-qsv-accuracy=0
-
-# Convergence time of 'avbr' RateControl (integer)
-#sout-qsv-convergence=0
-
-# Number of slices per frame (integer)
-#sout-qsv-num-slice=0
-
-# Number of reference frames (integer)
-#sout-qsv-num-ref-frame=0
-
-# Number of parallel operations (integer)
-#sout-qsv-async-depth=4
 
 [vorbis] # Vorbis audio decoder
 
@@ -2399,14 +2337,6 @@ sout-x264-tune=film
 # Maximal period (integer)
 #grain-period-max=48
 
-[postproc] # Video post processing filter
-
-# Post processing quality (integer)
-#postproc-q=6
-
-# FFmpeg post processing filter chains (string)
-#postproc-name=default
-
 [colorthres] # Color threshold filter
 
 # Color (integer)
@@ -2755,7 +2685,7 @@ sout-x264-tune=film
 #sout-avi-subject=
 
 # Encoder (string)
-#sout-avi-encoder=VLC Media Player - 3.0.22 Vetinari
+#sout-avi-encoder=VLC Media Player - 3.0.23 Vetinari
 
 # Keywords (string)
 #sout-avi-keywords=
@@ -4541,13 +4471,13 @@ metadata-network-access=1
 #global-key-jump-extrashort=
 
 # Very short backwards jump (string)
-#key-jump-extrashort=Shift+Left
+key-jump-extrashort=Left
 
 # Very short forward jump (string)
 #global-key-jump+extrashort=
 
 # Very short forward jump (string)
-#key-jump+extrashort=Shift+Right
+key-jump+extrashort=Right
 
 # Short backwards jump (string)
 #global-key-jump-short=
@@ -4589,7 +4519,7 @@ metadata-network-access=1
 #global-key-frame-next=
 
 # Next frame (string)
-#key-frame-next=e	Browser Next
+key-frame-next=Up
 
 # Activate (string)
 #global-key-nav-activate=
@@ -4601,7 +4531,7 @@ metadata-network-access=1
 #global-key-nav-up=
 
 # Navigate up (string)
-#key-nav-up=Up
+key-nav-up=
 
 # Navigate down (string)
 #global-key-nav-down=
@@ -4613,13 +4543,13 @@ metadata-network-access=1
 #global-key-nav-left=
 
 # Navigate left (string)
-#key-nav-left=Left
+key-nav-left=Shift+Left
 
 # Navigate right (string)
 #global-key-nav-right=
 
 # Navigate right (string)
-#key-nav-right=Right
+key-nav-right=Shift+Right
 
 # Go to the DVD menu (string)
 #global-key-disc-menu=

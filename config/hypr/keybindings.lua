@@ -1,5 +1,5 @@
 local terminal = "ghostty"
-local fileManager = "hyprfm"
+local fileManager = "nemo"
 local launcher = 'rofi -modes "run,drun,ssh" -width 10 -show drun'
 local runner = "rofi -show run -width 10"
 local mainMod = "SUPER"
@@ -11,6 +11,7 @@ hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(launcher))
 hl.bind(secondMod .. " + D", hl.dsp.exec_cmd(runner))
 
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("freecad"))
+hl.bind(mainMod .. " + H", hl.dsp.exec_cmd("QT_QPA_PLATFORM=xcb google-earth-pro"))
 hl.bind(mainMod .. " + K", hl.dsp.exec_cmd("kate"))
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("steam"))
 hl.bind(mainMod .. " + G", hl.dsp.exec_cmd("ghostty"))
@@ -18,8 +19,9 @@ hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("kitty"))
 hl.bind(mainMod .. " + n", hl.dsp.exec_cmd("swaync-client -t -sw"))
 hl.bind(mainMod .. " + l", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("brave --force-device-scale-factor=1.0"))
+hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd("zen-browser"))
 hl.bind(secondMod .. "+ B", hl.dsp.exec_cmd("brave --incognito --force-device-scale-factor=1.0"))
-
+hl.bind(secondMod .. "+ Y", hl.dsp.exec_cmd("zen-browser --private-window"), { workspace = "9" })
 hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("hyprshot -m window"))
 hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m output"))
 hl.bind(secondMod .. " + PRINT", hl.dsp.exec_cmd("hyprshot -m region"))

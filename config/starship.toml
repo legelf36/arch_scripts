@@ -4,7 +4,10 @@ format = """
 [](color1)\
 $os\
 $hostname\
-[](bg:color2 fg:color1)\
+[ ](fg:color1 bg:color0)\
+$cmd_duration\
+$line_break\
+[](color1)\
 $directory\
 [](bg:color3 fg:color2)\
 $git_branch\
@@ -24,22 +27,29 @@ $lua\
 $conda\
 [](fg:color5 bg:color1)\
 [ ](fg:color1)\
-$cmd_duration\
 $line_break\
+$sudo\
 $character"""
 
 palette = "pywal"
 
-right_format = ""
-continuation_prompt = "[∙](color0) "
+right_format = """
+"""
+
+continuation_prompt = "[∙](color15) "
 scan_timeout = 30
 command_timeout = 500
 add_newline = true
 follow_symlinks = true
 
+[sudo]
+style = "bg:color0 fg:color15"
+symbol = '🧙 '
+disabled = false
+
 [os]
 disabled = false
-style = "bg:color1 fg:color15"
+style = "bg:color2 fg:color15"
 
 [os.symbols]
 Windows = ""
@@ -65,13 +75,13 @@ RedHatEnterprise = "󱄛"
 [hostname]
 ssh_only = false
 ssh_symbol = "🌐"
-style = "bg:color1 fg:color15"
-format = '[ $ssh_symbol]($style bold)[$hostname]($style)'
+style = "bg:color2 fg:color15"
+format = '[ $ssh_symbol]($style bold)[$hostname]($style bold)'
 disabled = false
 
 [username]
 show_always = true
-style_user = "bg:color1 fg:color15"
+style_user = "bg:color2 fg:color15"
 style_root = "bg:#ff0000 fg:color15"
 format = '[ $user ]($style)'
 
@@ -171,8 +181,8 @@ ignore_base = false
 [time]
 disabled = false
 time_format = "%R"
-style = "bg:color1"
-format = '[[  $time ](fg:color15 bg:color1)]($style)'
+style = "bg:color2"
+format = '[[  $time ](fg:color15 bg:color2)]($style)'
 
 [line_break]
 disabled = false
@@ -180,7 +190,7 @@ disabled = false
 [character]
 format = "$symbol "
 disabled = false
-success_symbol = '[❯](bold fg:color1)'
+success_symbol = '[❯](bold fg:color6)'
 error_symbol = '[❯](bold fg:#ff0000)'
 vimcmd_symbol = '[❮](bold fg:#00ff00)'
 vimcmd_replace_one_symbol = '[❮](bold fg:color15)'
