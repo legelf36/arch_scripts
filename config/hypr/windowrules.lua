@@ -30,7 +30,7 @@ hl.window_rule({
 	match = {
 		class = "^(zen)$",
 	},
-	workspace = 2,
+	-- workspace = 2,
 })
 
 hl.window_rule({

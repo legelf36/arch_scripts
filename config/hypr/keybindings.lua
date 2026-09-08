@@ -105,14 +105,14 @@ end
 hl.bind(
 	"XF86AudioRaiseVolume",
 	hl.dsp.exec_cmd(
-		'wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 2.5%+ && notify-send "$(wpctl get-volume @DEFAULT_AUDIO_SINK@)%" -h string:x-canonical-private-synchronous:test'
+		'wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 2%+ && notify-send "$(wpctl get-volume @DEFAULT_AUDIO_SINK@)%" -h string:x-canonical-private-synchronous:test'
 	),
 	{ locked = true, repeating = true, description = "Raise volume" }
 )
 hl.bind(
 	"XF86AudioLowerVolume",
 	hl.dsp.exec_cmd(
-		'wpctl set-volume @DEFAULT_AUDIO_SINK@ 2.5%- && notify-send "$(wpctl get-volume @DEFAULT_AUDIO_SINK@)%" -h string:x-canonical-private-synchronous:test'
+		'wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%- && notify-send "$(wpctl get-volume @DEFAULT_AUDIO_SINK@)%" -h string:x-canonical-private-synchronous:test'
 	),
 	{ locked = true, repeating = true, description = "Lower volume" }
 )

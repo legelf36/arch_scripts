@@ -31,7 +31,7 @@ done < $HOME/.scripts/backup/backup-list.csv
 # popd                                                     # Go to previous directory and remove '.scripts' from the stack
 
 # Check for backup drive
-# [ ! -d "$HOME/wd2tb/" ] && echo "Backup drive not mounted. No Backup!" && exit
+[ ! -d "$HOME/wd2tb/" ] && echo "Backup drive not mounted. No Backup!" && exit
 
 # Backup specified directories with rsync
 rsync_options="-aEP --mkpath"
