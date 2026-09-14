@@ -1,0 +1,7 @@
+.git*
+.config/
+.local/
+.cache/
+.steam/
+utils/audio_dedupe_cache.json
+utils/dedupe_output.log
