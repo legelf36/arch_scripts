@@ -39,3 +39,9 @@ eval "$(starship init bash)"
   ! ${BASH_COMPLETION_VERSINFO:-} &&
   -f /usr/share/bash-completion/bash_completion ]] &&
     . /usr/share/bash-completion/bash_completion
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/kim/.lmstudio/bin"
+# End of LM Studio CLI section
+export PATH=~/.npm-global/bin:$PATH
+

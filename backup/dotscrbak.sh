@@ -23,12 +23,12 @@ while IFS=', ' read -r filename; do
 done < $HOME/.scripts/backup/backup-list.csv
 
 # Update "arch_scripts" on Github
-# pushd $HOME/.scripts # Push to the stack and move to the 'scripts' directory.
-# current_date=$(date +%Y-%m-%d-%h:%m)                     # Set variable to current date
-# git add -A                                               # Add any changes to 'master' branch.
-# git commit -m "scripted update to scripts $current_date" # Commit changes to the 'master' branch with date message.
-# git push -u                                              # Push the changes to the github repository.
-# popd                                                     # Go to previous directory and remove '.scripts' from the stack
+pushd $HOME/.scripts # Push to the stack and move to the 'scripts' directory.
+current_date=$(date +%Y-%m-%d-%h:%m)                     # Set variable to current date
+git add -A                                               # Add any changes to 'master' branch.
+git commit -m "scripted update to scripts $current_date" # Commit changes to the 'master' branch with date message.
+git push -u                                              # Push the changes to the github repository.
+popd                                                     # Go to previous directory and remove '.scripts' from the stack
 
 # Check for backup drive
 [ ! -d "$HOME/wd2tb/" ] && echo "Backup drive not mounted. No Backup!" && exit

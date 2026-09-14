@@ -30,3 +30,8 @@ alias nba="\$EDITOR ~/.bash_aliases"
 alias nbf="\$EDITOR ~/.bash_functions"
 alias nc="\$EDITOR ~/.config/conky/newaamine.conkyrc"
 alias sr="sudo reboot"
+
+alias llama='~/.repos/llama.cpp/build/bin/llama-cli -m ~/models/Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf -ngl 99 -c 2048'
+alias qwen='~/.repos/llama.cpp/build/bin/llama-cli -m ~/models/Qwen2.5-Coder-7B-Instruct-Q4_K_M.gguf -ngl 99 -c 2048'
+alias mynvr='setsid env LD_LIBRARY_PATH=~/.local/opt/ivms-4200/PlugIns ~/.local/opt/ivms-4200/iVMS-4200 > /tmp/ivms.log 2>&1 &'
+
