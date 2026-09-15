@@ -180,9 +180,12 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="Only report what would happen; copy nothing.")
     parser.add_argument("--workers", type=int, default=os.cpu_count() or 4,
                          help="Parallel fingerprinting processes (default: number of CPU cores)")
-    parser.add_argument("--cache", type=Path, default=Path("audio_dedupe_cache.json"),
-                         help="Cache file for resuming interrupted runs (default: ./audio_dedupe_cache.json)")
+    default_cache_dir = Path(os.environ.get("XDG_CACHE_HOME", Path.home() / ".cache")) / "audio_dedupe"
+    parser.add_argument("--cache", type=Path, default=default_cache_dir / "audio_dedupe_cache.json",
+                         help=f"Cache file for resuming interrupted runs (default: {default_cache_dir / 'audio_dedupe_cache.json'})")
     args = parser.parse_args()
+
+    args.cache.parent.mkdir(parents=True, exist_ok=True)
 
     for tool in ("fpcalc", "ffprobe"):
         if shutil.which(tool) is None:
