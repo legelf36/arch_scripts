@@ -48,7 +48,8 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 cat ~/.ssh/id_ed25519.pub          # paste into GitHub > Settings > SSH and GPG keys
-
+# Go to GitHub, go to Settings > SSh and GPG keys > New SSH key paste in the clipboard from cat
+# give it a title like machine name and save.
 ssh -T git@github.com              # test connection
 git remote set-url origin git@github.com:username/repo.git   # switch existing repo to SSH
 
