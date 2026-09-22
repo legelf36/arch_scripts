@@ -6,10 +6,9 @@ $os\
 $hostname\
 [ ](fg:color1 bg:color0)\
 $cmd_duration\
-$line_break\
-[](color1)\
+(color1)\
 $directory\
-[](bg:color3 fg:color2)\
+(bg:color3 fg:color2)\
 $git_branch\
 $git_status\
 [](fg:color3 bg:color4)\

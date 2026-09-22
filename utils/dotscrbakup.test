@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Check for "/.scripts" directory in "$HOME" 
+[ ! -d "$HOME/.scripts/config" ] && mkdir -p $HOME/.scripts/config && echo "Directory .scripts/config created"
+
+# Read entire file into a single array 'flat_array'
+IFS=$'\n,' read -d '' -ra flat_array1 < "backup-list.csv"
+
+# Print all elements
+# printf '%s\n' "${flat_array1[@]}"
+ 
+# Loop through array
+for i in ${flat_array1[@]}; do
+  # Remove potential trailing spaces or carriage returns
+  i=$(echo "$i" | tr -d '\r' | xargs)
+  if [ -d "$HOME/.config/$i" ]; then
+    echo "$i exists"
+    # cp -rfv $HOME/.config/$i $HOME/.scripts/config/
+  elif [ -f "$HOME/$i" ]; then
+    echo "$1 exists"
+    # cp -rfv $HOME/$i $HOME/.scripts/config/
+  elif [ -f "$HOME/.config/$i" ]; then
+     echo "$1 exists"
+    # cp -rfv $HOME/.config/$i $HOME/.scripts/config/
+  else
+    echo "no $i"
+  fi
+done
