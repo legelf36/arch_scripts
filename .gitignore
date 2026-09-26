@@ -6,3 +6,5 @@
 utils/audio_dedupe_cache.json
 utils/dedupe_output.log
 .aider*
+git_token.txt
+githubrecoverycodes
