@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Extract iVMS4200-linux.gz to ~/.local/opt/
 # This will create a "Linux" directory there with the app files.
