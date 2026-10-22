@@ -6,6 +6,7 @@
 sudo pacman -S yazi
 
 # Run the Omarchy-Yazi theme installer.
+# Omit to install Yazi defaults.
 curl -fsSL https://raw.githubusercontent.com/joaofelipegalvao/omarchy-yazi/main/scripts/omarchy-yazi-install.sh | bash   
 
 # Install the sshfs plugin for yazi

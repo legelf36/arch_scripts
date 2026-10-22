@@ -27,7 +27,7 @@ EXTS = {".jpg", ".jpeg", ".png", ".gif", ".bmp", ".tif", ".tiff", ".webp"}
 def dhash(img, size=8):
     """64-bit 'difference hash': survives resizing, recompression, small edits."""
     img = ImageOps.exif_transpose(img).convert("L").resize((size + 1, size), Image.LANCZOS)
-    px = list(img.getdata())
+    px = list(img.get_flattened_data())
     bits = 0
     for row in range(size):
         for col in range(size):
