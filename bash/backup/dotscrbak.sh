@@ -3,8 +3,8 @@
 # Check for "/.scripts" directory in "$HOME" 
 # [ ! -d "$HOME/.scripts/config" ] && mkdir -p $HOME/.scripts/config && echo "Directory .scripts/config created"
 
-HOMECFG="$HOME/.config"
-COPYLOC="$HOME/.scripts/config"
+HOMECFG="$HOME/.config/"
+COPYLOC="$HOME/.scripts/config/"
 BACKLOC="$HOME/wd2tb/Backups/"
 
 while IFS=', ' read -r filename; do
