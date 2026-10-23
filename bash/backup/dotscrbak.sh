@@ -19,7 +19,6 @@ cp -rfv ~/.config/kate/ $COPYLOC
 cp -rfv ~/.config/nvim/ $COPYLOC
 cp -rfv ~/.config/vlc/ $COPYLOC
 cp -rfv ~/.config/ghostty/ $COPYLOC
-cp -rfv ~/.config/zen/ $COPYLOC
 cp -rfv ~/.config/omarchy/ $COPYLOC
 cp -rfv ~/.config/aether/ $COPYLOC
 cp -rfv ~/.config/mpv/ $COPYLOC
