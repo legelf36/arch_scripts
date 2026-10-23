@@ -1,9 +1,2 @@
-hl.on("hyprland.start", function()
-	hl.exec_cmd("waybar")
-	hl.exec_cmd("swaync")
-	hl.exec_cmd("udiskie")
-	hl.exec_cmd("hypridle")
-	hl.exec_cmd("systemctl --user start hyprpolkitagent")
-	hl.exec_cmd("swww-daemon --format xrgb")
-	hl.exec_cmd("waypaper --restore")
-end)
+-- Extra autostart processes.
+-- o.launch_on_start("my-service")

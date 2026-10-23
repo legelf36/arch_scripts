@@ -1,47 +1,25 @@
-#
-# ~/.bashrc
-#
+# Omarchy environment (OMARCHY_PATH + PATH), needed even for non-interactive shells
+[[ -r /usr/share/omarchy/default/bash/env-bootstrap ]] && source /usr/share/omarchy/default/bash/env-bootstrap
 
-# If not running interactively, don't do anything
+# If not running interactively, don't do anything else (leave this above the rc source)
 [[ $- != *i* ]] && return
-# Pywa
-cat ~/.cache/wal/sequences
-# source ~/.cache/wal/colors.sh
-###EXPORT###
-export LANG='en_US.UTF-8'
-export EDITOR='nvim'
-export VISUAL='nvim'
-export HISTCONTROL=ignoreboth:erasedups
-export PAGER='most'
-# export STARSHIP_CONFIG="$HOME/.config/starship/wal_palette.toml:$HOME/.config/starship.toml"
 
-#ignore upper and lowercase when TAB completion
-bind "set completion-ignore-case on"
+# All the default Omarchy aliases and functions
+# (don't mess with these directly, just overwrite them here!)
+source "$OMARCHY_PATH/default/bash/rc"
+# source ~/.local/share/blesh/ble.sh --noattach
 
-force_color_prompt=yes
+eval "$(starship init bash)"
+# [[ ${BLE_VERSION-} ]] && ble-attach
 
-[ -d "$HOME/.bin" ] && PATH="$HOME/.bin:$PATH"
+eval "$(zoxide init bash)"
 
-[ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
-
-[ -d "$HOME/.scripts" ] && PATH="$HOME/.scripts:$PATH"
-
+# Add your own exports, aliases, and functions here.
 [ -f "$HOME/.bash_aliases" ] && . $HOME/.bash_aliases
 
 [ -f "$HOME/.bash_functions" ] && . $HOME/.bash_functions
 
-PS1='[\u@\h \W]\$ '
-eval "$(zoxide init bash)"
-eval "$(starship init bash)"
+# Make an alias for invoking commands you use constantly
+# alias p='python'
 
-# Use bash-completion, if available, and avoid double-sourcing
-[[ $PS1 &&
-  ! ${BASH_COMPLETION_VERSINFO:-} &&
-  -f /usr/share/bash-completion/bash_completion ]] &&
-    . /usr/share/bash-completion/bash_completion
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/home/kim/.lmstudio/bin"
-# End of LM Studio CLI section
-export PATH=~/.npm-global/bin:$PATH
-
+. "$HOME/.local/share/../bin/env"

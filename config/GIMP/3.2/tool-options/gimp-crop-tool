@@ -1,0 +1,8 @@
+# GIMP gimp-crop-tool options
+
+(aspect-denominator 480)
+(aspect-numerator 854)
+(pattern "Pine")
+(highlight-opacity 0.39600000000000002)
+
+# end of gimp-crop-tool options

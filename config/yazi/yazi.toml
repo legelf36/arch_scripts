@@ -3,9 +3,9 @@
 "schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
 [mgr]
-ratio          = [ 2, 4, 5 ]
+ratio          = [ 2, 3, 5 ]
 sort_by        = "mtime"
-sort_sensitive = false
+sort_sensitive = true
 sort_reverse 	 = true 
 sort_dir_first = true
 sort_translit  = false
@@ -29,9 +29,10 @@ ueberzug_offset = [ 0, 0, 0, 0 ]
 
 [opener]
 edit = [
-	{ run = "${EDITOR:-nvim} %s", desc = "$EDITOR",      for = "unix", block = true },
-	{ run = "code %s",          desc = "code",         for = "windows", orphan = true },
-	{ run = "code -w %s",       desc = "code (block)", for = "windows", block = true },
+	{ run = '${EDITOR:=nvim} "%s"',desc = "$EDITOR",      for = "unix", block = true },
+  { run = 'sudoedit "$@"',        desc = "sudoedit",     block = true, for = "unix" },
+	{ run = "code %s",              desc = "code",         for = "windows", orphan = true },
+	{ run = "code -w %s",           desc = "code (block)", for = "windows", block = true },
 ]
 play = [
 	{ run = "xdg-open %s1",    desc = "Play", for = "linux", orphan = true },

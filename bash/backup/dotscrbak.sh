@@ -7,20 +7,28 @@ HOMECFG="$HOME/.config/"
 COPYLOC="$HOME/.scripts/config/"
 BACKLOC="$HOME/wd2tb/Backups/"
 
-while IFS=', ' read -r filename; do
-  # Remove carriage return if present
-  filename="${filename//$'\r'/}"
-  # Check if file exists using -e test
-  if [ -e "$HOME/$filename" ]; then
-    echo "File '$HOME/$filename' exists"
-    cp -rf $HOME/$filename $COPYLOC/
-  elif [ -e "$HOMECFG/$filename" ]; then
-    echo "File '$HOMECFG/$filename' exists"
-    cp -rf $HOMECFG/$filename $COPYLOC/
-  else
-    echo "File '$filename' does not exist"
-  fi
-done < $HOME/.scripts/backup/backup-list.csv
+cp -fv ~/.bashrc $COPYLOC
+cp -fv ~/.bash_aliases $COPYLOC
+cp -fv ~/.bash_functions $COPYLOC
+cp -fv ~/.config/starship.toml $COPYLOC
+# copy directories.
+cp -rfv ~/.config/autostart/ $COPYLOC
+cp -rfv ~/.config/ckb-next/ $COPYLOC
+cp -rfv ~/.config/hypr/ $COPYLOC
+cp -rfv ~/.config/kate/ $COPYLOC
+cp -rfv ~/.config/nvim/ $COPYLOC
+cp -rfv ~/.config/vlc/ $COPYLOC
+cp -rfv ~/.config/ghostty/ $COPYLOC
+cp -rfv ~/.config/zen/ $COPYLOC
+cp -rfv ~/.config/omarchy/ $COPYLOC
+cp -rfv ~/.config/aether/ $COPYLOC
+cp -rfv ~/.config/mpv/ $COPYLOC
+cp -rfv ~/.config/yazi/ $COPYLOC
+cp -rfv ~/.config/GIMP/ $COPYLOC
+cp -rfv ~/.config/FreeCAD/ $COPYLOC
+cp -rfv ~/.config/cursor/ $COPYLOC
+cp -rfv ~/.config/strawberry/ $COPYLOC
+cp -rfv ~/.config/git/ $COPYLOC
 
 # Update "arch_scripts" on Github
 pushd $HOME/.scripts # Push to the stack and move to the 'scripts' directory.

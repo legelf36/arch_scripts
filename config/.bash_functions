@@ -30,48 +30,29 @@ export -f ex
 # function to update "~/.scripts" directory to git hub
 # usage: ug
 ug() {
-  . $HOME/.scripts/utils/scr-git-update.sh
+  . $HOME/.scripts/bash/utils/scr-git-update.sh
 }
 export -f ug
 
 # function to copy configuration files to scripts directory
 # usage: copydots
-copydots() {
-  . $HOME/.scripts/backup/dotscrbak.sh
+dots() {
+  . $HOME/.scripts/bash/backup/dotscrbak.sh
 }
-export -f copydots
+export -f dots
 
 # function to simplify ssh login after key has been sent
 # usage: sshin <last 3 digits in IP>
 sshin() {
-  ssh -t kim@192.168.0."$1"
+  ssh kim@192.168.0."$1"
   return
 }
 export -f sshin
 
-# function to restart waybar
-# usage: rw
-rw() {
-  killall -SIGUSR2 waybar
-}
-export -f rw
-
-# Update PyWal with new image to create colors
-# usage: pwal /path/to/image.png
-mywal() {
-  wal -i "$1" --cols16
-#. ~/.config/update_starship.sh # > /tmp/starship-palette.tmp
-    # Replace palette section in starship.toml
-#    awk '/^[palettes.pywal]$/,/^color15 =/{next} // {print}' ~/.config/starship.toml > /tmp/starship.toml
-#    cat /tmp/wal_palette.toml >> /tmp/starship.toml
-#    mv /tmp/starship.toml ~/.config/starship.toml
-}
-export -f mywal
-
 # function to start yazi and stay in current directory after yazi exits
 # usage: y
 y() {
-	cat ~/.cache/wal/sequences # Pywal colors
+# cat ~/.cache/wal/sequences # Pywal colors
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
   yazi "$@" --cwd-file="$tmp"
   IFS= read -r -d '' cwd <"$tmp"
@@ -79,3 +60,16 @@ y() {
   rm -f -- "$tmp"
 }
 export -f y
+
+# function to call renumber.sh for renaming all files in the current directory
+renum() {
+  . ~/.scripts/bash/utils/renumber.sh $PWD
+}
+export -f renum
+
+# same as above but "new" prefix
+renumnew() {
+  . ~/.scripts/bash/utils/renumbernew.sh $PWD
+}
+export -f renumnew
+
