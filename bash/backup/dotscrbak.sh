@@ -70,7 +70,7 @@ fi
 # 4. rsync to the backup drive
 # ---------------------------------------------------------------------------
 rsync_options=(
-  -a --itemize-changes --mkpath
+  -a --itemize-changes --mkpath --exclude='zen'
   # Uncomment to skip bulky cache folders inside ~/.config:
   # --exclude='Cache' --exclude='Code Cache' --exclude='GPUCache'
 )
