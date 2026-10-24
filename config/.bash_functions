@@ -30,14 +30,14 @@ export -f ex
 # function to update "~/.scripts" directory to git hub
 # usage: ug
 ug() {
-  . $HOME/.scripts/bash/utils/scr-git-update.sh
+  ~/.scripts/bash/utils/scr-git-update.sh
 }
 export -f ug
 
 # function to copy configuration files to scripts directory
 # usage: copydots
 dots() {
-  . $HOME/.scripts/bash/backup/dotscrbak.sh
+  ~/.scripts/bash/backup/dotscrbak.sh
   local rc=$?
   local log
   log=$(command ls -t ~/.local/state/dotscrbak/ | head -1)
