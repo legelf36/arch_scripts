@@ -34,11 +34,11 @@ dirs=(
 )
 
 for f in "${files[@]}"; do
-  cp -fv "$f" "$COPYLOC"
+  cp -f "$f" "$COPYLOC"
 done
 
 for d in "${dirs[@]}"; do
-  cp -rfv "$HOME/.config/$d" "$COPYLOC"
+  cp -rf "$HOME/.config/$d" "$COPYLOC"
 done
 
 # Package lists, so a fresh install can be rebuilt with:
