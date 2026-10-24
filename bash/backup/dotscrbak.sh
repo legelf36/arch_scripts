@@ -1,53 +1,80 @@
 #!/bin/bash
+# dotscrbak.sh - gather dotfiles, push them to GitHub, rsync everything to the backup drive.
 
-# Check for "/.scripts" directory in "$HOME" 
-# [ ! -d "$HOME/.scripts/config" ] && mkdir -p $HOME/.scripts/config && echo "Directory .scripts/config created"
+set -u
 
-HOMECFG="$HOME/.config/"
 COPYLOC="$HOME/.scripts/config/"
-BACKLOC="$HOME/wd2tb/Backups/"
+MOUNT="$HOME/wd2tb"
+BACKLOC="$MOUNT/Backups/"
 
-cp -fv ~/.bashrc $COPYLOC
-cp -fv ~/.bash_aliases $COPYLOC
-cp -fv ~/.bash_functions $COPYLOC
-cp -fv ~/.config/starship.toml $COPYLOC
-# copy directories.
-cp -rfv ~/.config/autostart/ $COPYLOC
-cp -rfv ~/.config/ckb-next/ $COPYLOC
-cp -rfv ~/.config/hypr/ $COPYLOC
-cp -rfv ~/.config/kate/ $COPYLOC
-cp -rfv ~/.config/nvim/ $COPYLOC
-cp -rfv ~/.config/vlc/ $COPYLOC
-cp -rfv ~/.config/ghostty/ $COPYLOC
-cp -rfv ~/.config/omarchy/ $COPYLOC
-cp -rfv ~/.config/aether/ $COPYLOC
-cp -rfv ~/.config/mpv/ $COPYLOC
-cp -rfv ~/.config/yazi/ $COPYLOC
-cp -rfv ~/.config/GIMP/ $COPYLOC
-cp -rfv ~/.config/FreeCAD/ $COPYLOC
-cp -rfv ~/.config/cursor/ $COPYLOC
-cp -rfv ~/.config/strawberry/ $COPYLOC
-cp -rfv ~/.config/git/ $COPYLOC
+mkdir -p "$COPYLOC"
 
-# Update "arch_scripts" on Github
-pushd $HOME/.scripts # Push to the stack and move to the 'scripts' directory.
-current_date=$(date +%Y-%m-%d-%h:%m)                     # Set variable to current date
-git add -A                                               # Add any changes to 'master' branch.
-git commit -m "scripted update to scripts $current_date" # Commit changes to the 'master' branch with date message.
-git push -u                                              # Push the changes to the github repository.
-popd                                                     # Go to previous directory and remove '.scripts' from the stack
+# ---------------------------------------------------------------------------
+# 1. Gather dotfiles into ~/.scripts/config
+# ---------------------------------------------------------------------------
+files=(
+  "$HOME/.bashrc"
+  "$HOME/.bash_aliases"
+  "$HOME/.bash_functions"
+  "$HOME/.config/starship.toml"
+)
 
-# Check for backup drive
-[ ! -d "$HOME/wd2tb/" ] && echo "Backup drive not mounted. No Backup!" && exit
+# Directories under ~/.config
+dirs=(
+  autostart ckb-next hypr kate nvim vlc ghostty omarchy
+  aether mpv yazi GIMP FreeCAD cursor strawberry git
+)
 
-# Backup specified directories with rsync
-rsync_options="-aEP --mkpath"
+for f in "${files[@]}"; do
+  cp -fv "$f" "$COPYLOC"
+done
 
-$(which rsync) $rsync_options $HOME/.scripts $BACKLOC
-$(which rsync) $rsync_options $HOME/.config $BACKLOC
-$(which rsync) $rsync_options $HOME/.repos $BACKLOC
-$(which rsync) $rsync_options $HOME/Documents $BACKLOC
-$(which rsync) $rsync_options $HOME/Downloads $BACKLOC
-$(which rsync) $rsync_options $HOME/Pictures $BACKLOC
-$(which rsync) $rsync_options $HOME/Videos $BACKLOC
-# $(which rsync) $rsync_options $HOME/Cad $BACKLOC
+for d in "${dirs[@]}"; do
+  cp -rfv "$HOME/.config/$d" "$COPYLOC"
+done
+
+# Package lists, so a fresh install can be rebuilt with:
+#   sudo pacman -S --needed - < pkglist-native.txt
+pacman -Qqen > "${COPYLOC}pkglist-native.txt"   # official repo packages
+pacman -Qqem > "${COPYLOC}pkglist-aur.txt"      # AUR / foreign packages
+
+# ---------------------------------------------------------------------------
+# 2. Update the GitHub repo (keep this repo PRIVATE, see notes)
+# ---------------------------------------------------------------------------
+pushd "$HOME/.scripts" > /dev/null || exit 1
+git add -A
+git commit -m "scripted update to scripts $(date +%Y-%m-%d_%H:%M)"
+git push
+popd > /dev/null
+
+# ---------------------------------------------------------------------------
+# 3. Check the backup drive is really mounted (not just that the folder exists)
+# ---------------------------------------------------------------------------
+if ! mountpoint -q "$MOUNT"; then
+  echo "Backup drive not mounted. No backup!"
+  exit 1
+fi
+
+# ---------------------------------------------------------------------------
+# 4. rsync to the backup drive
+# ---------------------------------------------------------------------------
+rsync_options=(
+  -aP --mkpath
+  # Uncomment to skip bulky cache folders inside ~/.config:
+   --exclude='Cache' --exclude='Code Cache' --exclude='GPUCache'
+)
+
+sources=(
+  .scripts
+  .config
+  .repos
+  Documents
+  Downloads
+  Pictures
+  Videos
+  # Cad
+)
+
+for s in "${sources[@]}"; do
+  rsync "${rsync_options[@]}" "$HOME/$s" "$BACKLOC"
+done

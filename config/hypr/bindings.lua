@@ -29,9 +29,15 @@
 -- o.bind("SUPER + PERIOD", nil, "omarchy-shell shell toggle omarchy.emojis")
 o.bind("SUPER + ALT + R", "Power rename", "omarchy-shell shell toggle io.github.basantpandey.power-rename")
 hl.unbind("SUPER + W")
-o.bind("SUPER + Q", "Close window", hl.dsp.window.close())
+hl.unbind("SUPER + S")
+hl.unbind("SUPER + ALT + S")
 hl.unbind("XF86AudioRaiseVolume")
 hl.unbind("XF86AudioLowerVolume")
+
+o.bind("SUPER + Q", "Close window", hl.dsp.window.close())
+o.bind("SUPER + S", "Steam", { launch = "steam" })
+o.bind("SUPER + ALT + S", "Shotwell", { launch = "Shotwell" })
+
 o.bind("XF86AudioRaiseVolume", "Volume up", "omarchy-audio-output-volume +2 ", { locked = true, repeating = true })
 o.bind("XF86AudioLowerVolume", "Volume down", "omarchy-audio-output-volume -2 ", { locked = true, repeating = true })
 
