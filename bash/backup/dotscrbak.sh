@@ -67,7 +67,7 @@ rsync_options=(
 sources=(
   .scripts
   .config
-  .repos
+  Work
   Documents
   Downloads
   Pictures
