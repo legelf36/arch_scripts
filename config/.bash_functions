@@ -38,6 +38,15 @@ export -f ug
 # usage: copydots
 dots() {
   . $HOME/.scripts/bash/backup/dotscrbak.sh
+  local rc=$?
+  local log
+  log=$(command ls -t ~/.local/state/dotscrbak/ | head -1)
+  if [ "$rc" -eq 0 ]; then
+    echo "Backup finished."
+  else
+    echo "Backup stopped early (exit $rc) - check the log."
+  fi
+  echo "Log: ~/.local/state/dotscrbak/$log"
 }
 export -f dots
 
