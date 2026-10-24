@@ -9,7 +9,7 @@ set -u
 LOGDIR="$HOME/.local/state/dotscrbak"
 mkdir -p "$LOGDIR"
 LOG="$LOGDIR/backup-$(date +%Y-%m-%d_%H%M).log"
-exec >> "$LOG" 2>&1
+exec > >(tee -a "$LOG") 2>&1
 
 COPYLOC="$HOME/.scripts/config/"
 MOUNT="$HOME/wd2tb"
