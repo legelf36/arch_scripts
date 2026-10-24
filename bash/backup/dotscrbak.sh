@@ -30,7 +30,7 @@ files=(
 # Directories under ~/.config
 dirs=(
   autostart ckb-next hypr kate nvim vlc ghostty omarchy
-  aether mpv yazi GIMP FreeCAD cursor strawberry git
+  aether mpv yazi GIMP FreeCAD cursor strawberry
 )
 
 for f in "${files[@]}"; do
@@ -69,13 +69,12 @@ fi
 rsync_options=(
   -a --itemize-changes --mkpath
   # Uncomment to skip bulky cache folders inside ~/.config:
-  # --exclude='Cache' --exclude='Code Cache' --exclude='GPUCache'
+   --exclude='Cache' --exclude='Code Cache' --exclude='GPUCache'
 )
 
 sources=(
   .scripts
   .config
-  .repos
   Documents
   Downloads
   Pictures
