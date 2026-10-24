@@ -9,7 +9,7 @@ set -u
 LOGDIR="$HOME/.local/state/dotscrbak"
 mkdir -p "$LOGDIR"
 LOG="$LOGDIR/backup-$(date +%Y-%m-%d_%H%M).log"
-exec > >(tee -a "$LOG") 2>&1
+exec >> "$LOG" 2>&1
 
 COPYLOC="$HOME/.scripts/config/"
 MOUNT="$HOME/wd2tb"
@@ -30,7 +30,7 @@ files=(
 # Directories under ~/.config
 dirs=(
   autostart ckb-next hypr kate nvim vlc ghostty omarchy
-  aether mpv yazi GIMP FreeCAD cursor strawberry
+  aether mpv yazi GIMP FreeCAD cursor strawberry git
 )
 
 for f in "${files[@]}"; do
@@ -69,7 +69,7 @@ fi
 rsync_options=(
   -a --itemize-changes --mkpath
   # Uncomment to skip bulky cache folders inside ~/.config:
-   --exclude='Cache' --exclude='Code Cache' --exclude='GPUCache'
+  # --exclude='Cache' --exclude='Code Cache' --exclude='GPUCache'
 )
 
 sources=(
