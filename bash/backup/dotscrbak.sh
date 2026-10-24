@@ -30,15 +30,18 @@ files=(
 # Directories under ~/.config
 dirs=(
   autostart ckb-next hypr kate nvim vlc ghostty omarchy
-  aether mpv yazi GIMP FreeCAD cursor strawberry git
+  aether mpv yazi GIMP FreeCAD cursor strawberry
 )
 
+# rsync -a only rewrites files that actually changed and keeps their timestamps.
+# (Plain cp stamps every copy with the current time, which made the later backup
+# step see every file as "changed" on every run.)
 for f in "${files[@]}"; do
-  cp -f "$f" "$COPYLOC"
+  rsync -a --itemize-changes "$f" "$COPYLOC"
 done
 
 for d in "${dirs[@]}"; do
-  cp -rf "$HOME/.config/$d" "$COPYLOC"
+  rsync -a --itemize-changes "$HOME/.config/$d" "$COPYLOC"
 done
 
 # Package lists, so a fresh install can be rebuilt with:
