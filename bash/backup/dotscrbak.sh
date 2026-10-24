@@ -3,6 +3,14 @@
 
 set -u
 
+# Send all output (normal + errors) to a dated log file instead of the terminal.
+# To watch it scroll AND keep the log, replace the last line below with:
+#   exec > >(tee -a "$LOG") 2>&1
+LOGDIR="$HOME/.local/state/dotscrbak"
+mkdir -p "$LOGDIR"
+LOG="$LOGDIR/backup-$(date +%Y-%m-%d_%H%M).log"
+exec >> "$LOG" 2>&1
+
 COPYLOC="$HOME/.scripts/config/"
 MOUNT="$HOME/wd2tb"
 BACKLOC="$MOUNT/Backups/"
@@ -59,15 +67,15 @@ fi
 # 4. rsync to the backup drive
 # ---------------------------------------------------------------------------
 rsync_options=(
-  -aP --mkpath
+  -a --itemize-changes --mkpath
   # Uncomment to skip bulky cache folders inside ~/.config:
-   --exclude='Cache' --exclude='Code Cache' --exclude='GPUCache'
+  # --exclude='Cache' --exclude='Code Cache' --exclude='GPUCache'
 )
 
 sources=(
   .scripts
   .config
-  Work
+  .repos
   Documents
   Downloads
   Pictures
@@ -78,3 +86,8 @@ sources=(
 for s in "${sources[@]}"; do
   rsync "${rsync_options[@]}" "$HOME/$s" "$BACKLOC"
 done
+
+# ---------------------------------------------------------------------------
+# 5. Delete logs older than 30 days
+# ---------------------------------------------------------------------------
+find "$LOGDIR" -name 'backup-*.log' -mtime +30 -delete
