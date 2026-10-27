@@ -8,7 +8,8 @@ hl.window_rule({
   match = { class = "omacut" },
 --  workspace = 3,
   no_dim = true,
-  float = false
+  float = false,
+  opacity = "1 1",
 })
 hl.window_rule({
   match = { class = "org.freecad.FreeCAD" },
@@ -18,7 +19,8 @@ hl.window_rule({
   match = { class = "vlc" },
   workspace = 3,
   no_dim = true,
-  float = false
+  float = false,
+  opacity = "1 1",
 })
 hl.window_rule({
   match = { class = "org.gnome.Shotwell" },
@@ -28,7 +30,8 @@ hl.window_rule({
 hl.window_rule({
   match = { class = "mpv" },
   no_dim = true,
-  workspace = 3
+  workspace = 3,
+  opacity = "1 1",
 })
 hl.window_rule({
   name = "gimp-no-transparency",
@@ -47,5 +50,6 @@ hl.window_rule({
   match = { class = "zen" },
   no_dim = true,
   float = false,
+  opacity = "1 1",
 })
-
+o.window({ tag = "default-opacity" }, { opacity = "1.0 0.96" })

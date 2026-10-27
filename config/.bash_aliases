@@ -29,7 +29,8 @@ alias sr="sudo reboot"
 
 alias llama='~/.repos/llama.cpp/build/bin/llama-cli -m ~/models/Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf -ngl 99 -c 2048'
 alias qwen='~/.repos/llama.cpp/build/bin/llama-cli -m ~/models/Qwen2.5-Coder-7B-Instruct-Q4_K_M.gguf -ngl 99 -c 2048'
-alias qwen-srv='llama-server -m ~/models/qwen2.5-coder-7b-instruct-q5_k_m.gguf -ngl 99 -c 4096'
+alias qwen4-srv='llama-server -m ~/models/qwen2.5-coder-7b-instruct-q4_k_m.gguf -ngl 99 -c 4096 -np 1 --port 8080'
+alias qwen5-srv='llama-server -m ~/models/qwen2.5-coder-7b-instruct-q5_k_m.gguf -ngl 99 -c 4096 -np 1 --port 8080'
 alias mynvr='setsid env LD_LIBRARY_PATH=~/.local/opt/iVMS-4200/PlugIns ~/.local/opt/iVMS-4200/iVMS-4200 > /tmp/ivms.log 2>&1 &'
 alias aid='aider --model openai/qwen2.5-coder-7b-instruct'
 

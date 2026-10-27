@@ -69,11 +69,6 @@
   },
   "plugins": [
     {
-      "id": "cole-robertson.lightbar",
-      "edges": "top",
-      "thickness": 1
-    },
-    {
       "id": "io.github.basantpandey.power-rename"
     },
     {

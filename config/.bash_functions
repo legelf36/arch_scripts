@@ -50,14 +50,6 @@ dots() {
 }
 export -f dots
 
-# function to simplify ssh login after key has been sent
-# usage: sshin <last 3 digits in IP>
-sshin() {
-  ssh kim@192.168.0."$1"
-  return
-}
-export -f sshin
-
 # function to start yazi and stay in current directory after yazi exits
 # usage: y
 y() {
