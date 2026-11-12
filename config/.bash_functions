@@ -35,7 +35,7 @@ ug() {
 export -f ug
 
 # function to copy configuration files to scripts directory
-# usage: copydots
+# usage: dots
 dots() {
   ~/.scripts/bash/backup/dotscrbak.sh
   local rc=$?
@@ -61,6 +61,16 @@ y() {
   rm -f -- "$tmp"
 }
 export -f y
+
+# function to start aider with keys and ports set
+# usage qw35key
+qw35key() {
+  aider --model openai/qwen3.5-4b-coder \
+    --openai-api-base http://127.0.0.1:8080/v1 \
+    --openai-api-key dummy \
+    --no-show-model-warnings
+}
+export -f qw35key
 
 # function to call renumber.sh for renaming all files in the current directory
 renum() {

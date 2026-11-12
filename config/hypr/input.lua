@@ -3,10 +3,13 @@
 
 -- Keyboard layout and options.
 -- See https://wiki.hypr.land/Configuring/Basics/Variables/#input
+-- hl.config({
+--   input = {
 --     -- Use multiple keyboard layouts and switch between them with Left Alt + Right Alt.
 --     kb_layout = "us,dk,eu",
 --     kb_options = "compose:caps,shift:both_capslock_cancel,grp:alts_toggle",
-    --     -- Use a specific keyboard variant if needed (e.g. intl for international keyboards).
+--
+--     -- Use a specific keyboard variant if needed (e.g. intl for international keyboards).
 --     kb_variant = "intl",
 --
 --     -- Change speed of keyboard repeat.
@@ -14,6 +17,7 @@
 --     repeat_delay = 250,
 --
 --     -- Start with numlock on by default.
+--     numlock_by_default = true,
 --
 --     -- Increase sensitivity for mouse/trackpad (default: 0).
 --     sensitivity = 0.35,
@@ -41,8 +45,14 @@ hl.config({
   input = {
     kb_options = "caps:escape",
     numlock_by_default = true,
+    follow_mouse = 1,
+    focus_on_close = 1,
+    repeat_delay = 250,
+    repeat_rate = 25,
   },
-})
+ })
+--   },
+-- })
 
 -- App-specific touchpad scroll speeds.
 -- o.window("(Alacritty|kitty|foot)", { scroll_touchpad = 1.5 })

@@ -1,34 +1,7 @@
 [[plugin.deps]]
 use = "uhs-robert/sshfs"
-rev = "a8b8903"
-hash = "8c1b36103121a66b37308afaf7124575"
+rev = "2113cf6"
+hash = "5f540c20805d1a73eea68c12e410d890"
 
-[[flavor.deps]]
-use = "kmlupreti/ayu-dark"
-rev = "648a178"
-hash = "1a8af82f6246942bd700316a16c4e14a"
-
-[[flavor.deps]]
-use = "yazi-rs/flavors:catppuccin-frappe"
-rev = "f6b425a"
-hash = "2af5f0305730530f23e61ccaba119efe"
-
-[[flavor.deps]]
-use = "Chromium-3-Oxide/everforest-medium"
-rev = "0158f0f"
-hash = "dbbbfe681e156c28303efb1f44b6cbc4"
-
-[[flavor.deps]]
-use = "ficd0/ashen:ashen"
-rev = "e43a6b4"
-hash = "f9aed559dc6820dbc7253253be1bb6d2"
-
-[[flavor.deps]]
-use = "BennyOe/tokyo-night"
-rev = "5f56364"
-hash = "c0bf69ad2c44005892d586e9693993c6"
-
-[[flavor.deps]]
-use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "ba27774"
-hash = "14b111562c00eb1917fe3ca3ae9bb771"
+[flavor]
+deps = []

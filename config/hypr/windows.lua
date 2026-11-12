@@ -13,11 +13,11 @@ hl.window_rule({
 })
 hl.window_rule({
   match = { class = "org.freecad.FreeCAD" },
-  workspace = 4
+  workspace = 14
 })
 hl.window_rule({
   match = { class = "vlc" },
-  workspace = 3,
+  workspace = 13,
   no_dim = true,
   float = false,
   opacity = "1 1",
@@ -25,12 +25,12 @@ hl.window_rule({
 hl.window_rule({
   match = { class = "org.gnome.Shotwell" },
   float = false,
-  workspace = 3
+  workspace = 13
 })
 hl.window_rule({
   match = { class = "mpv" },
   no_dim = true,
-  workspace = 3,
+--  workspace = 13,
   opacity = "1 1",
 })
 hl.window_rule({
@@ -38,13 +38,13 @@ hl.window_rule({
   match = { class = "^[Gg]imp.*" },
   opacity = "1.0 override 1.0 override",
   no_dim = true,
-  workspace = 4
+  workspace = 14
 })
 hl.window_rule({
   match = { class = "steam" },
   no_dim = true,
   float = false,
-  workspace = 7
+  workspace = 15
 })
 hl.window_rule({
   match = { class = "zen" },

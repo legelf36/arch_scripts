@@ -1,0 +1,124 @@
+# ============================================================================
+# Omarchy Yazi Theme: matte-black
+# Source: matte-black
+# ============================================================================
+# 
+# PERSISTENT THEME PROFILE
+# This file is yours to customize! Your changes will persist across theme
+# switches - when you return to this theme, your customizations remain.
+#
+# ============================================================================
+
+[mgr]
+marker_copied = { fg = "#efbf04", bg = "#efbf04" }
+marker_cut = { fg = "#b91c1c", bg = "#b91c1c" }
+marker_marked = { fg = "#f59e0b", bg = "#f59e0b" }
+marker_selected = { fg = "#d97706", bg = "#d97706" }
+
+cwd = { fg = "#eaeaea" }
+hovered = { reversed = true }
+preview_hovered = { reversed = true }
+
+find_keyword = { fg = "#fbbf24", bg = "#121212" }
+find_position = {}
+
+count_copied = { fg = "#121212", bg = "#efbf04" }
+count_cut = { fg = "#121212", bg = "#b91c1c" }
+count_selected = { fg = "#121212", bg = "#d97706" }
+
+border_symbol = "│"
+border_style = { fg = "#2c2c2c" }
+
+[tabs]
+active = { fg = "#121212", bg = "#eaeaea", bold = true }
+inactive = { fg = "#eaeaea", bg = "#1e1e1e" }
+
+[mode]
+normal_main = { fg = "#1e1e1e", bg = "#efbf04" }
+normal_alt = { fg = "#8a8a8d", bg = "#1e1e1e" }
+
+select_main = { fg = "#121212", bg = "#d97706" }
+select_alt = { fg = "#d97706", bg = "#2c2c2c" }
+
+unset_main = { fg = "#121212", bg = "#d97706" }
+unset_alt = { fg = "#d97706", bg = "#2c2c2c" }
+
+[status]
+overall = { fg = "#eaeaea", bg = "#0d0d0d" }
+
+progress_label = { fg = "#d97706", bold = true }
+progress_normal = { fg = "#2c2c2c", bg = "#121212" }
+progress_error = { fg = "#2c2c2c", bg = "#121212" }
+
+perm_type = { fg = "#a3a3a3" }
+perm_read = { fg = "#fbbf24" }
+perm_write = { fg = "#b91c1c" }
+perm_exec = { fg = "#efbf04" }
+perm_sep = { fg = "#8a8a8d" }
+
+[pick]
+border = { fg = "#333333" }
+active = { fg = "#d97706", bold = true }
+inactive = {}
+
+[input]
+border = { fg = "#333333" }
+title = {}
+value = {}
+selected = { reversed = true }
+
+[completion]
+border = { fg = "#333333" }
+active = { reversed = true }
+inactive = {}
+
+[tasks]
+border = { fg = "#333333" }
+title = {}
+hovered = { fg = "#d97706" }
+
+[which]
+cols = 3
+separator = " - "
+separator_style = { fg = "#a3a3a3" }
+mask = { bg = "#0d0d0d" }
+rest = { fg = "#737373" }
+cand = { fg = "#fbbf24" }
+desc = { fg = "#8a8a8d" }
+
+[help]
+on = { fg = "#a3a3a3" }
+run = { fg = "#d97706" }
+desc = {}
+hovered = { reversed = true, bold = true }
+footer = { fg = "#eaeaea", bg = "#1e1e1e" }
+
+[notify]
+title_info = { fg = "#a3a3a3" }
+title_warn = { fg = "#f59e0b" }
+title_error = { fg = "#b91c1c" }
+
+[filetype]
+rules = [
+  # images
+  { mime = "image/*", fg = "#dc2626" },
+
+  # media
+  { mime = "{audio,video}/*", fg = "#fbbf24" },
+
+  # archives
+  { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#f59e0b" },
+
+  # documents
+  { mime = "application/{pdf,doc,rtf,vnd.*}", fg = "#efbf04" },
+
+  # broken links
+  { name = "*", is = "orphan", fg = "#8a8a8d" },
+
+  # executables
+  { name = "*", is = "exec", fg = "#efbf04" },
+
+  # fallback
+  { name = "*", fg = "#bebebe" },
+  { name = "*/", fg = "#eaeaea" },
+]

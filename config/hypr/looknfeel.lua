@@ -15,6 +15,9 @@
 
 -- https://wiki.hypr.land/Configuring/Basics/Variables/#decoration
  hl.config({
+   cursor = { 
+     warp_on_change_workspace = 1,
+   },
    general = {
      gaps_in = 3,
      gaps_out = 10,
@@ -32,6 +35,16 @@
      dim_strength = 0.15,
    },
  })
+-- hl.config({
+--   decoration = {
+--     -- Use round window corners.
+--     rounding = 8,
+--
+--     -- Dim unfocused windows (0.0 = no dim, 1.0 = fully dimmed).
+--     dim_inactive = true,
+--     dim_strength = 0.15,
+--   },
+-- })
 
 -- https://wiki.hypr.land/Configuring/Basics/Variables/#animations
 -- hl.config({
@@ -56,3 +69,8 @@
 --     column_width = 0.97,
 --   },
 -- })
+
+-- Opt another application in to Omarchy's standard transparency.
+-- Find its class with: hyprctl clients
+-- o.transparent_window("my-app")
+-- o.transparent_window("my-app", "0.9 0.85") -- Custom active/inactive opacity.

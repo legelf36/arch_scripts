@@ -5,46 +5,55 @@
     "lock": 300
   },
   "bar": {
-    "id": "ozgun.primary-bar",
-    "monitor": "HDMI-A-1",
     "position": "top",
     "transparent": true,
-    "centerAnchor": "omarchy.clock",
     "layout": {
       "left": [
         {
           "id": "omarchy.menu"
         },
         {
-          "id": "cynricantao.system-monitor"
+          "id": "tornikegomareli.spaces",
+          "showApps": "hoverOnly",
+          "hideEmpty": true,
+          "perMonitor": true
         },
         {
-          "id": "omarchy.workspaces"
+          "id": "io.github.creolben.equalizer"
         }
       ],
       "center": [
         {
-          "id": "omarchy.indicators"
-        },
-        {
-          "id": "omarchy.clock",
+          "id": "io.github.mattwolfgang.clock",
           "format": "dddd h:mm AP",
           "formatAlt": "d MMMM 'W'ww yyyy",
           "verticalFormat": "HH\n—\nmm"
-        },
-        {
-          "id": "omarchy.keyboard-layout"
-        },
-        {
-          "id": "omarchy.weather"
-        },
-        {
-          "id": "omarchy.system-update"
         }
       ],
       "right": [
         {
           "id": "omarchy.tray"
+        },
+        {
+          "id": "ubruckhaus.llm-usage"
+        },
+        {
+          "id": "dexterhere.omallama"
+        },
+        {
+          "id": "eduardodallecort.weather-radar"
+        },
+        {
+          "id": "io.github.momostifler96.omarchy-cleaner"
+        },
+        {
+          "id": "io.github.mtolhuys.disk-lens"
+        },
+        {
+          "id": "io.github.juliusmork-sys.monitor-settings-extender"
+        },
+        {
+          "id": "omarchy.keyboard-layout"
         },
         {
           "id": "omarchy.agents"
@@ -59,20 +68,76 @@
           "id": "omarchy.audio"
         },
         {
-          "id": "omarchy.monitor"
-        },
-        {
           "id": "omarchy.power"
         }
-      ]
+      ],
+      "centerBegin": [
+        {
+          "id": "omarchy.indicators"
+        }
+      ],
+      "centerEnd": [
+        {
+          "id": "omarchy.elsewhen",
+          "cities": [
+            {
+              "name": "Regina",
+              "zone": "America/Regina"
+            },
+            {
+              "name": "Sao Paulo",
+              "zone": "America/Sao_Paulo"
+            },
+            {
+              "name": "London",
+              "zone": "Europe/London"
+            },
+            {
+              "name": "Dubai",
+              "zone": "Asia/Dubai"
+            },
+            {
+              "name": "Tokyo",
+              "zone": "Asia/Tokyo"
+            }
+          ]
+        },
+        {
+          "id": "omarchy.weather"
+        },
+        {
+          "id": "omarchy.spacer"
+        },
+        {
+          "id": "dizziee.system-updates"
+        },
+        {
+          "id": "omaplug"
+        },
+        {
+          "id": "omarchy.system-update"
+        }
+      ],
+      "tray": []
+    },
+    "patrickfanella.monitor-bar": {
+      "version": 1,
+      "primary": "DP-3",
+      "outputs": {
+        "DP-3": {
+          "mode": "full"
+        },
+        "HDMI-A-1": {
+          "mode": "hidden"
+        }
+      }
     }
   },
-  "plugins": [
-    {
-      "id": "io.github.basantpandey.power-rename"
-    },
-    {
-      "id": "fkcodes.key-promoter"
-    }
+  "plugins": [],
+  "disabledPlugins": [
+    "omarchy.clock"
+  ],
+  "cloneSourceRestores": [
+    "io.github.mattwolfgang.clock"
   ]
 }
