@@ -29,8 +29,8 @@ files=(
 
 # Directories under ~/.config
 dirs=(
-  autostart ckb-next hypr kate nvim vlc ghostty omarchy
-  aether mpv yazi GIMP FreeCAD cursor strawberry omallama
+  autostart ckb-next hypr nvim vlc ghostty omarchy
+  aether mpv yazi FreeCAD omallama
 )
 
 # rsync -a only rewrites files that actually changed and keeps their timestamps.
@@ -78,8 +78,8 @@ rsync_options=(
 sources=(
   .scripts
   .config
-  models
   .aider
+  models
   Wallpapers
   Work
   Documents
