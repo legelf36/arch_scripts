@@ -33,14 +33,14 @@
 
 -- o.bind("SUPER + ALT + R", "Power rename", "omarchy-shell shell toggle io.github.basantpandey.power-rename")
 hl.unbind("SUPER + W")
-hl.unbind("SUPER + S")
-hl.unbind("SUPER + ALT + S")
+--hl.unbind("SUPER + S")
+--hl.unbind("SUPER + ALT + S")
 hl.unbind("XF86AudioRaiseVolume")
 hl.unbind("XF86AudioLowerVolume")
 
 o.bind("SUPER + Q", "Close window", hl.dsp.window.close())
-o.bind("SUPER + S", "Steam", { launch = "steam" })
-o.bind("SUPER + ALT + S", "Shotwell", { launch = "Shotwell" })
+--o.bind("SUPER + S", "Steam", { launch = "steam" })
+--o.bind("SUPER + ALT + S", "Shotwell", { launch = "Shotwell" })
 
 o.bind("XF86AudioRaiseVolume", "Volume up", "omarchy-audio-output-volume +1 ", { locked = true, repeating = true })
 o.bind("XF86AudioLowerVolume", "Volume down", "omarchy-audio-output-volume -1 ", { locked = true, repeating = true })

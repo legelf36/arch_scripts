@@ -7,6 +7,16 @@ w[(flags)A-B], w[(flags)X] - Prop for window counts on the workspace. A-B is an 
 f[-1], f[0], f[1], f[2] - fullscreen state of the workspace. -1: no fullscreen, 0: fullscreen, 1: maximized, 2, fullscreen without fullscreen state sent to the window.
 ]]
 --
-hl.workspace_rule({ workspace = "r[1-20]", layout = "scrolling" })
+hl.workspace_rule({
+  workspace = "r[11-20]",
+  layout = "scrolling",
+})
+hl.workspace_rule({
+  workspace = "r[1-10]",
+  layout_opts = {
+    direction = "down",
+  },
+})
+
 hl.workspace_rule({ workspace = "w[tv1]", gaps_out = 5, gaps_in = 3 })
 hl.workspace_rule({ workspace = "f[1]", gaps_out = 5, gaps_in = 3 })

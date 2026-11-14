@@ -15,8 +15,5 @@ source "$OMARCHY_PATH/default/bash/rc"
 [ -f "$HOME/.bash_aliases" ] && . $HOME/.bash_aliases
 [ -f "$HOME/.bash_functions" ] && . $HOME/.bash_functions
 
-export OPENAI_API_BASE=http://127.0.0.1:9931/v1
-export OPENAI_API_KEY=dummy
-
 # Make an alias for invoking commands you use constantly
 # alias p='python'
