@@ -2,8 +2,8 @@
 
 -- https://wiki.hypr.land/Configuring/Basics/Variables/#decoration
  hl.config({
-   cursor = { 
-     warp_on_change_workspace = 1,
+   cursor = {
+     warp_on_change_workspace = 0,
    },
 
    general = {
@@ -29,4 +29,4 @@
 -- Opt another application in to Omarchy's standard transparency.
 -- Find its class with: hyprctl clients
 -- o.transparent_window("my-app")
- o.transparent_window("com.mitchellh.ghostty", "0.99 0.5") -- Custom active/inactive opacity.
+

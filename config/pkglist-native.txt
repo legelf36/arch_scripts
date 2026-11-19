@@ -157,6 +157,7 @@ sof-firmware
 sshfs
 starship
 steam
+strawberry
 sudo
 sushi
 system-config-printer

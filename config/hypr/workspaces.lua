@@ -12,10 +12,15 @@ hl.workspace_rule({
   layout = "scrolling",
 })
 hl.workspace_rule({
-  workspace = "r[1-10]",
+  workspace = "r[2-10]",
+  layout = "scrolling",
   layout_opts = {
     direction = "down",
   },
+})
+hl.workspace_rule({
+  workspace = "r[1]",
+  layout = "floating",
 })
 
 hl.workspace_rule({ workspace = "w[tv1]", gaps_out = 5, gaps_in = 3 })

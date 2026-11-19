@@ -41,9 +41,6 @@
           "id": "dexterhere.omallama"
         },
         {
-          "id": "eduardodallecort.weather-radar"
-        },
-        {
           "id": "io.github.momostifler96.omarchy-cleaner"
         },
         {
@@ -103,7 +100,9 @@
           ]
         },
         {
-          "id": "omarchy.weather"
+          "id": "eduardodallecort.weather-radar",
+          "alertsEnabled": true,
+          "alertRadiusKm": 150
         },
         {
           "id": "omarchy.spacer"
@@ -116,6 +115,9 @@
         },
         {
           "id": "omarchy.system-update"
+        },
+        {
+          "id": "omarchy.weather"
         }
       ],
       "tray": []

@@ -1,4 +1,5 @@
 #!/bin/bash
+# .bash_functions
 
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
